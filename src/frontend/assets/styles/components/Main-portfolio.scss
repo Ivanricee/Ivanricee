@@ -1,0 +1,125 @@
+@import '../Vars.scss';
+.main--portfolio {
+  $self: &;
+  @include main;
+  display: grid;
+  grid-template: 50px 140px 1fr/ 1fr;
+  grid-template-areas:
+    'title'
+    'carousel'
+    'breakdown';
+
+  &__title {
+    grid-area: title;
+    h1 {
+      color: $title_color;
+      font-size: 1.09em;
+      padding: 9px 0;
+    }
+  }
+  &__carousel {
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    width: 75%;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+  &__carousel-cont {
+    animation: fade 1s linear;
+    width: 700px;
+  }
+  .BrainhubCarouselItem {
+    height: inherit;
+    margin: 0 2px;
+    flex-shrink: 0;
+    border-radius: 10%;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 150px;
+    }
+    &:hover {
+      transform: scale(1.05, 1.05);
+      margin: 0 5px;
+
+      #{$self}__carousel-text {
+        p {
+          padding: 50% 0;
+        }
+      }
+    }
+  }
+
+  &__carousel-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgb(95, 165, 189);
+    background: $carousel_background;
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100%;
+      color: #312a3a;
+      font-weight: bold;
+      color: white;
+      padding: 10px 0;
+    }
+  }
+  /*&__carousel-item--active {
+    border: 8px solid #415e91;
+    p {
+      font-size: 1.5em;
+      padding: 35% 0;
+      height: 100%;
+      align-items: center;
+    }
+  }*/
+
+  &__breakdown {
+    grid-area: breakdown;
+    background-color: green;
+    #{$self}__breakdown-carou {
+      width: 500px;
+      height: auto;
+    }
+  }
+}
+.main--reel {
+  @include main;
+}
+//-------------------------  ANIMATION  ----------
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+}
+.fade-enter {
+  //estado inicial de entrada
+  background: sandybrown;
+}
+.fade-enter-active {
+  //estado final de entrada
+  transition-duration: 1s;
+  background: sienna;
+}
+.fade-leave {
+  //estado inicial de salida
+  transform: translateY(0);
+}
+
+.fade-leave-active {
+  //estado inicial de salida
+  transition-duration: 1s;
+  transform: translateY(500px);
+}

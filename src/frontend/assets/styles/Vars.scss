@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap');
+
+$conent-font: 'Titillium Web', sans-serif;
+$nav-font: 'Khand', sans-serif;
+//Variables
+$title_color: #bdc1cf;
+$link_color: rgb(246, 166, 203);
+
+$body_background: linear-gradient(
+  270deg,
+  rgba(10, 94, 159, 1) 13%,
+  rgba(24, 64, 125, 1) 75%
+);
+
+$left_background: url('../assets/introduce_2.png');
+$button_background: linear-gradient(
+  329deg,
+  rgba(223, 127, 145, 1) 0%,
+  rgba(223, 165, 205, 1) 100%
+);
+$color_link: rgb(255, 200, 210);
+$carousel_background: linear-gradient(
+  1deg,
+  rgba(15, 41, 61, 0.95) 0%,
+  rgba(224, 219, 236, 0.3) 100%
+);
+
+$carousel_selected_background: linear-gradient(
+  329deg,
+  rgba(84, 143, 188, 1) 46%,
+  rgba(104, 178, 206, 1) 100%
+);
+
+$breakdown_background: linear-gradient(
+  329deg,
+  rgba(113, 185, 204, 0.04) 13%,
+  rgba(225, 219, 236, 0.2) 100%
+);
+
+$box_title_background: linear-gradient(
+  270deg,
+  rgba(70, 117, 168, 0.3) 9%,
+  rgba(240, 193, 246, 0.3) 100%
+);
+$margen_nav_main: 0 4%;
+
+//mixin
+@mixin main {
+  grid-area: mainb;
+  margin: $margen_nav_main;
+  font-family: 'Titillium Web';
+}
+@mixin box-title {
+  display: flex;
+  font-size: 1.25em;
+  align-items: center;
+  padding: 7px;
+  height: 40px;
+  background: $box_title_background;
+  border-radius: 4%;
+  color: white;
+  width: 100%;
+}
+@mixin parrafo {
+  margin: 0.1em;
+  line-height: 1.2em;
+  color: lighten($title_color, $amount: 0.1);
+  font-size: 0.95em;
+}

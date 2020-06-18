@@ -1,0 +1,18 @@
+# Animacion --------------------------------------------
+
+# Usamos:
+  %%% npm react-transition-group
+  Reacciona cuando queremos cambiar algo de nuestra pagina
+# importamos dentro de nuestro componentes
+  import 
+
+--properties:
+
+appear -> configura la animacion inicial cuando cargamos por primera vez
+onEnter -> cuando cuando entra a escena
+onExited -> animacion cuando sale de escena
+
+# Tiempo de la transision como propiedad
+# Definimos el tiempo para que la animacion deje de ejecutarse y se elimine
+  para proteger el renidmiento de la app
+transitionEnterTimeout,transitionLeaveTimeout

@@ -1,0 +1,94 @@
+@import '../Vars.scss';
+.main--cv {
+  @include main;
+  display: grid;
+  grid-template: 50px 1fr / repeat(3, 1fr);
+  grid-template-areas:
+    'title title title'
+    'articlea articleb articlec';
+  grid-column-gap: 1em;
+  color: white;
+  .title {
+    grid-area: title;
+    color: $title_color;
+    font-size: 1.09em;
+    padding: 9px 0;
+  }
+  a {
+    @include parrafo;
+    display: flex;
+    color: $link_color;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      a {
+        text-decoration: underline;
+        outline: none;
+      }
+    }
+  }
+
+  article {
+    h2 {
+      @include box-title;
+    }
+    p {
+      @include parrafo;
+    }
+    h3 {
+      color: lighten($title_color, $amount: 9);
+      width: 100%;
+      font-size: 1.3em;
+      color: #c0d0e4;
+      margin-top: 1.7em;
+    }
+    h3:nth-of-type(1) {
+      margin-top: 0.5em;
+    }
+    h4 {
+      margin-bottom: 1.2em;
+      color: $link_color;
+      //color: lighten($title_color, $amount: 3);
+      font-weight: 600;
+    }
+    small {
+      font-size: 0.7em;
+      position: relative;
+      bottom: 1.1em;
+    }
+    ul {
+      color: lighten($title_color, $amount: 0.1);
+      padding: 0 0.7em 0 1.2em;
+    }
+
+    & .article__wrapper-span {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      color: lighten($title_color, $amount: 5);
+    }
+    span {
+      font-size: 0.9em;
+      margin: 3px;
+      padding: 3px 6px;
+      background-color: rgba($color: #ffffff, $alpha: 0.1);
+    }
+    .article__icon {
+      display: flex;
+      justify-content: space-around;
+      svg {
+        margin-top: 10px;
+        width: 50px;
+      }
+    }
+  }
+  .article--a {
+    grid-area: articlea;
+  }
+  .article--b {
+    grid-area: articleb;
+  }
+  .article--c {
+    grid-area: articlec;
+  }
+}
