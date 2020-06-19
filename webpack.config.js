@@ -1,18 +1,33 @@
 const path = require('path')
-import webpack from 'webpack'
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+compressionWebpackPlugin = require('compression-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+const ManifestPlugin = require('webpack-manifest-plugin')
 
+
+require('dotenv').config()
+const isDev = (process.env.ENV === 'development')
+const entry = ['./src/frontend/index.js'];
+
+if(isDev){
+  entry.push('webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true')
+}
 module.exports = {
   //reaload: refresca toda la aplicaicon en tiempo real, mientras trabajemos
-  entry: ['./src/frontend/index.js','webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true'], //archivo origen
-  mode: 'development',
+  entry: entry, //archivo origen
+  mode: process.env.ENV,
   output: {
     publicPath: '/',
-    path: path.resolve(__dirname, 'dist'), //carpeta donde guardara todo
-    filename: 'assets/app.js', //archivo principal
+    path: path.resolve(__dirname, 'src/server/public'), //carpeta donde guardara todo
+    filename: isDev ? 'assets/app.js' : 'assets/app-[hash].js', //archivo principal
   },
   resolve: {
     extensions: ['.js', '.jsx'], //extensiones que usaremos en nuestro proyecto
+  },
+  optimization:{
+    minimize:true,
+    minimizer:[new TerserPlugin()]
   },
   module: {
     //reglas para nuestro proyecto
@@ -25,16 +40,6 @@ module.exports = {
           //usar loader de babel
           loader: 'babel-loader',
         },
-      },
-      {
-        // permite trabajar con archivos html
-        test: /\.html$/,
-        use: [
-          //usamos loader instalado
-          {
-            loader: 'html-loader',
-          },
-        ],
       },
       {
         test: /\.(s*)css$/,
@@ -64,11 +69,17 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
+    
     //plugins necesitados
     //refrescado en tiempo real
-    new webpack.HotModuleReplacementPlugin(),
+    isDev ? new webpack.HotModuleReplacementPlugin() : ()=>{},
+    isDev ? () => {} : new compressionWebpackPlugin({
+      test: /\.js$|\.css$/,
+      filename: '[path].gz'
+    }),
+        isDev ? () => { } :  new ManifestPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'assets/app.css',
+      filename: isDev ? 'assets/app.css' : 'assets/app-[hash].css',
     }),
   ],
 }

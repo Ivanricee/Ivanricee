@@ -10,8 +10,8 @@ import reducer from './reducers/index'
 
 //definimos el browserhistory
 const history = createBrowserHistory()
-preloadedState = window.__PRELOADED_STATE__
-const store = createStore(reducer, initialState)
+const preloadedState = window.__PRELOADED_STATE__
+const store = createStore(reducer, preloadedState)
 delete window.__PRELOADED_STATE__
 ReactDOM.hydrate(
   <Provider store={store}>
