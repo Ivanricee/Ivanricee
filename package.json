@@ -18,7 +18,7 @@
     "node": "10.16.x"
   },
   "author": "Ivan Bautista",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/register": "^7.10.1",
     "@brainhubeu/react-carousel": "^1.18.6",
