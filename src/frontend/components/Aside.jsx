@@ -1,13 +1,13 @@
 import React from 'react'
 import '../assets/styles/components/Aside.scss'
-import { FiMail, FiSmartphone, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { FiMail, FiSmartphone, FiGithub } from 'react-icons/fi'
 import { FaLinkedinIn, FaArtstation } from 'react-icons/fa'
 import { GoLocation } from 'react-icons/go'
 
 const Aside = () => (
-  <aside className="left">
+  <aside className="main-left">
     <h1>FRONTEND DEVELOPER</h1>
-    <h2 className="left__name">IVAN BAUTISTA GUERRERO</h2>
+    <h3 className="main-left__name">IVAN BAUTISTA GUERRERO</h3>
     <h2>CONTACT</h2>
 
     <p>
@@ -19,15 +19,15 @@ const Aside = () => (
       <FiSmartphone />
       (+52) 55 6129 1646
     </p>
-    <a target="_blank" href="https://github.com/ivanrices">
+    <a target="_blank" rel="noreferrer" href="https://github.com/ivanrices">
       <FiGithub />
       /ivanrices
     </a>
-    <a target="_blank" href="https://www.linkedin.com/in/ivanrice/">
+    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ivanrice/">
       <FaLinkedinIn />
       /ivanrice
     </a>
-    <a target="_blank" href="https://www.artstation.com/ivanrices">
+    <a target="_blank" rel="noreferrer" href="https://www.artstation.com/ivanrices">
       <FaArtstation />
       /ivanrices
     </a>

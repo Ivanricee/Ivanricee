@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
-import { setActiveMenu } from '../actions'
 import '../assets/styles/App.scss'
 import '../assets/styles/components/Nav.scss'
 

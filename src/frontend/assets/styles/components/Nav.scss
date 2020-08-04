@@ -4,7 +4,7 @@ nav {
   font-family: $nav-font;
   font-weight: 400;
   height: 100%;
-  font-size: 1em;
+  font-size: 1.09em;
   border-bottom: 1px solid gray;
   color: white;
   margin: $margen_nav_main;
@@ -12,7 +12,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 6px;
+    padding-bottom: 10px;
     height: inherit;
     list-style: none;
     li {
@@ -22,6 +22,7 @@ nav {
         text-decoration: none;
       }
       & .active {
+        font-size: 1.11em;
         color: $color_link;
         text-decoration: none;
         border-bottom: 3px solid $color_link;

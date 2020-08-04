@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import '../assets/styles/components/Main-cv.scss'
+import '../assets/styles/components/Curriculum.scss'
 import { connect } from 'react-redux'
 import { FaRegCalendarAlt } from 'react-icons/fa'
 import { setActiveMenu } from '../actions'
@@ -11,17 +11,15 @@ const Curriculum = (props) => {
     props.setActiveMenu(1)
   }, [])
   return (
-    <main className="main--cv">
-      <h1 className="title">Curriculum Vitae</h1>
-
-      <article className="article--a">
+    <main className="main-cv">
+      <article className="article-a">
         <h2>
           <Icon icon="exp" />
           WORK EXPERIENCE
         </h2>
 
-        <h3>Fullstack Developer</h3>
-        <a href="http://campus-virtuales.com/" target="_blank">
+        <h3 className="main-cv__subtitle">Fullstack Developer</h3>
+        <a href="http://campus-virtuales.com/" target="_blank" rel="noreferrer">
           <h4>Campus Virtuales</h4>
         </a>
         <small>
@@ -60,8 +58,8 @@ const Curriculum = (props) => {
           </li>
         </ul>
 
-        <h3>Professional practice</h3>
-        <a href="http://www.portomx.com.mx/" target="_blank">
+        <h3 className="main-cv__subtitle">Professional practice</h3>
+        <a href="http://www.portomx.com.mx/" target="_blank" rel="noreferrer">
           <h4>PortoMx</h4>
         </a>
         <small>
@@ -77,12 +75,12 @@ const Curriculum = (props) => {
           </li>
         </ul>
       </article>
-      <article className="article--b">
+      <article className="article-b">
         <h2>
           <Icon icon="portfolio" />
           EDUCATION
         </h2>
-        <h3>Platzi</h3>
+        <h3 className="main-cv__subtitle">Platzi</h3>
         <ul>
           <li>
             <p>Git.</p>
@@ -107,7 +105,7 @@ const Curriculum = (props) => {
           </li>
         </ul>
 
-        <h3>Elephant VFX</h3>
+        <h3 className="main-cv__subtitle">Elephant VFX</h3>
         <ul>
           <li>Tracking.</li>
           <li>Texturing and Look-Development.</li>
@@ -116,23 +114,25 @@ const Curriculum = (props) => {
           <li>Image-based lighting.</li>
         </ul>
 
-        <h3>Licenciatura en Diseño, Animación y Arte Digital.</h3>
-        <a href="https://www.unitec.mx/" target="_blank">
+        <h3 className="main-cv__subtitle">
+          Licenciatura en Diseño, Animación y Arte Digital.
+        </h3>
+        <a href="https://www.unitec.mx/" target="_blank" rel="noreferrer">
           <h4>Universidad Tecnológica de México.</h4>
         </a>
         <small>
           <FaRegCalendarAlt /> 2014 - 2017
         </small>
 
-        <h3>T.S.U. Sistemas Informáticos.</h3>
-        <a href="http://www.utn.edu.mx/" target="_blank">
+        <h3 className="main-cv__subtitle">T.S.U. Sistemas Informáticos.</h3>
+        <a href="http://www.utn.edu.mx/" target="_blank" rel="noreferrer">
           <h4>Universidad Tecnológica de Nezahualcóyotl.</h4>
         </a>
         <small>
           <FaRegCalendarAlt /> 2011 - 2012
         </small>
       </article>
-      <article className="article--c">
+      <article className="article-c">
         <h2>
           <Icon icon="skill" />
           ADDITIONAL INFORMATION
@@ -141,7 +141,7 @@ const Curriculum = (props) => {
         <p>Spanish: native </p>
         <p>English: intermediate </p>
 
-        <h3>Web Development</h3>
+        <h3 className="main-cv__subtitle">Web Development</h3>
         <div className="article__wrapper-span">
           <span>JavaScript.</span>
 
@@ -174,7 +174,7 @@ const Curriculum = (props) => {
           <span>Research</span>
         </div>
 
-        <h3>3D modeling and texturing</h3>
+        <h3 className="main-cv__subtitle">3D modeling and texturing</h3>
         <div className="article__wrapper-span">
           <span>Autodesk Maya.</span>
 
@@ -195,7 +195,7 @@ const Curriculum = (props) => {
           <span>Unreal Engine (Look-Dev).</span>
         </div>
 
-        <h3>Hobbies</h3>
+        <h3 className="main-cv__subtitle">Hobbies</h3>
         <div className="article__icon">
           <Icon icon="design" />
           <Icon icon="kindle" />

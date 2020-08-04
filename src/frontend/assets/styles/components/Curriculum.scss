@@ -1,18 +1,17 @@
 @import '../Vars.scss';
-.main--cv {
+.main-cv {
   @include main;
-  display: grid;
-  grid-template: 50px 1fr / repeat(3, 1fr);
+  grid-template: 10px 1fr / repeat(3, 1fr);
   grid-template-areas:
     'title title title'
     'articlea articleb articlec';
   grid-column-gap: 1em;
   color: white;
-  .title {
+  &__title-page {
     grid-area: title;
     color: $title_color;
     font-size: 1.09em;
-    padding: 9px 0;
+    padding: 10px 0;
   }
   a {
     @include parrafo;
@@ -35,18 +34,19 @@
     p {
       @include parrafo;
     }
-    h3 {
-      color: lighten($title_color, $amount: 9);
+    .main-cv__subtitle {
+      color: lighten($title_color, $amount: 7);
       width: 100%;
-      font-size: 1.3em;
-      color: #c0d0e4;
-      margin-top: 1.7em;
+      font-size: 1.4em;
+      margin-top: 1.4em;
+      margin-bottom: 0.9em;
     }
-    h3:nth-of-type(1) {
+    .main-cv__subtitle:nth-of-type(1) {
       margin-top: 0.5em;
     }
     h4 {
-      margin-bottom: 1.2em;
+      margin-bottom: 1.1em;
+      margin-top: -1em;
       color: $link_color;
       //color: lighten($title_color, $amount: 3);
       font-weight: 600;
@@ -54,10 +54,10 @@
     small {
       font-size: 0.7em;
       position: relative;
-      bottom: 1.1em;
+      bottom: 1.5em;
     }
     ul {
-      color: lighten($title_color, $amount: 0.1);
+      @include parrafo;
       padding: 0 0.7em 0 1.2em;
     }
 
@@ -82,13 +82,13 @@
       }
     }
   }
-  .article--a {
+  .article-a {
     grid-area: articlea;
   }
-  .article--b {
+  .article-b {
     grid-area: articleb;
   }
-  .article--c {
+  .article-c {
     grid-area: articlec;
   }
 }

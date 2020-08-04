@@ -51,13 +51,17 @@ if (ENV === 'development') {
 
 const setResponse = (html, preloadedState, manifest) => {
   const mainStyles = manifest ? manifest['main.css'] : 'assets/app.css'
+  const vendorStyles = manifest ? manifest['vendors.css'] : 'assets/vendors.app.css'
   const mainBuild = manifest ? manifest['main.js'] : 'assets/app.js'
+  const vendorBuild = manifest ? manifest['vendors.js'] : 'assets/vendor.js'
+
   return `<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="${mainStyles}" type="text/css">
+        <link rel="stylesheet" href="${vendorStyles}" type="text/css">
         <title>Ivanrice</title>
       </head>
       <body>
@@ -69,6 +73,7 @@ const setResponse = (html, preloadedState, manifest) => {
         )}
         </script>
         <script src="${mainBuild}" type="text/javascript"></script>
+        <script src="${vendorBuild}" type="text/javascript"></script>
       </body>
     </html>`
 }

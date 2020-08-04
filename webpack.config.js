@@ -1,10 +1,10 @@
 const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-compressionWebpackPlugin = require('compression-webpack-plugin')
+const compressionWebpackPlugin = require('compression-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 require('dotenv').config()
 const isDev = (process.env.ENV === 'development')
@@ -27,11 +27,40 @@ module.exports = {
   },
   optimization:{
     minimize:true,
-    minimizer:[new TerserPlugin()]
+    minimizer:[new TerserPlugin()],
+    splitChunks:{
+      chunks: 'async',
+      name:true,
+      cacheGroups:{
+        vendors:{
+          name:'vendors',
+          chunks: 'all',
+          reuseExistingChunk: true,
+          priority:1,
+          filename:isDev ? 'assets/vendor.js' : 'assets/vendor-[hash].js',
+          //lo hcae siempre
+          enforce: true,
+          test(module,chunks){
+            //busca y valida que exista, si existe obtiene el nombre del chunk
+            const name = module.nameForCondition && module.nameForCondition()
+            //Con una expresion regular validamos que sea diferente de vendors y
+            //segundo que este dentro de node_modules
+            return chunks.some(chunk => chunks.name !== 'vendors' && /[\\/]node_modules[\\/]/.test(name))
+          },
+        }
+      }
+    },
   },
   module: {
     //reglas para nuestro proyecto
     rules: [
+      {
+        //archivos que va a evaluar
+        enforce:'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader:'eslint-loader',
+      },
       {
         //identificacion de nuestros archivos js y jsx y exlusion de node modules
         test: /\.(js|jsx)$/,
@@ -72,6 +101,7 @@ module.exports = {
     
     //plugins necesitados
     //refrescado en tiempo real
+    isDev? () => {} : new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'src/server/public')}),
     isDev ? new webpack.HotModuleReplacementPlugin() : ()=>{},
     isDev ? () => {} : new compressionWebpackPlugin({
       test: /\.js$|\.css$/,

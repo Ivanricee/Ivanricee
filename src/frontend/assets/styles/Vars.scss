@@ -4,7 +4,7 @@
 $conent-font: 'Titillium Web', sans-serif;
 $nav-font: 'Khand', sans-serif;
 //Variables
-$title_color: #bdc1cf;
+$title_color: #c0d0e4;
 $link_color: rgb(246, 166, 203);
 
 $body_background: linear-gradient(
@@ -47,7 +47,8 @@ $margen_nav_main: 0 4%;
 
 //mixin
 @mixin main {
-  grid-area: mainb;
+  display: grid;
+  grid-area: main;
   margin: $margen_nav_main;
   font-family: 'Titillium Web';
 }
@@ -64,7 +65,7 @@ $margen_nav_main: 0 4%;
 }
 @mixin parrafo {
   margin: 0.1em;
-  line-height: 1.2em;
-  color: lighten($title_color, $amount: 0.1);
-  font-size: 0.95em;
+  line-height: 1.35em;
+  color: lighten(#bdc1cf, $amount: 1);
+  font-size: 0.99em;
 }

@@ -5,11 +5,9 @@ const reducer = (state, action) => {
         ...state, //retorna estado de la app
         menu: action.payload, //cambia el estado
       }
-      break
 
     default:
       return state
-      break
   }
 }
 
