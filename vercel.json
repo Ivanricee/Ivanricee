@@ -4,13 +4,8 @@
     "ENV": "production",
     "PORT": "3001"
   },
-  "builds": [
-    {
-      "src": "src/server/index.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
+  "builds": [{ "use": "@now/static-build", "src": "package.json" }]
+  /* "routes": [
     {
       "headers": {
         "Access-Control-Allow-Origin": "*",
@@ -20,5 +15,5 @@
       "src": "/(.*)",
       "dest": "src/server/index.js"
     }
-  ]
+  ]*/
 }
