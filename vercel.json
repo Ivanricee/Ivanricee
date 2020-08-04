@@ -1,7 +1,3 @@
 {
-  "version": 2,
-  "env": {
-    "ENV": "production",
-    "PORT": "3001"
-  }
+  "version": 2
 }
