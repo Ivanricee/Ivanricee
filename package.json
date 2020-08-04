@@ -11,7 +11,10 @@
     "lint": "eslint src/frontend/ --ext .js --ext .jsx --fix"
   },
   "keywords": [],
-  "author": "",
+  "engines": {
+    "node": "12.16.x"
+  },
+  "author": "Ivan Bautista",
   "license": "ISC",
   "dependencies": {
     "@babel/register": "^7.10.1",
