@@ -74,9 +74,8 @@ yarn-error.log
 
 # Notas, tutoriales y pre builds
 src/server/public
-notes
-mocks_view
+notes/
+mocks_view/
 
 # deploy
-.vercel
 .vercelignore
