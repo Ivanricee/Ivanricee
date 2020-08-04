@@ -6,7 +6,7 @@
   },
   "builds": [
     {
-      "src": "server/server.js",
+      "src": "src/server/index.js",
       "use": "@vercel/node"
     }
   ],
@@ -18,7 +18,7 @@
         "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
       },
       "src": "/(.*)",
-      "dest": "server/server.js"
+      "dest": "src/server/index.js"
     }
   ]
 }

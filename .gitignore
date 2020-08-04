@@ -74,7 +74,7 @@ yarn-error.log
 
 # Notas, tutoriales y pre builds
 src/server/public
-notes/
+notes
 mocks_view
 
 # deploy
