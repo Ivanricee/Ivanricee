@@ -15,7 +15,7 @@
     "webpack"
   ],
   "engines": {
-    "node": "10.16.x"
+    "node": "10.x"
   },
   "author": "Ivan Bautista",
   "license": "MIT",
@@ -56,6 +56,7 @@
     "webpack-manifest-plugin": "^2.2.0"
   },
   "devDependencies": {
+    "@vercel/node": "^1.7.4",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^4.0.0",
     "css-loader": "^3.5.3",
