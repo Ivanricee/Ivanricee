@@ -3,6 +3,5 @@
   "env": {
     "ENV": "production",
     "PORT": "3001"
-  },
-  "builds": [{ "use": "@now/static-build", "src": "package.json" }]
+  }
 }
