@@ -1,23 +1,28 @@
 @import '../Vars.scss';
 @import '../breakpoints.scss';
-.main-left {
+.main-aside {
   box-shadow: 0.1px 0px 7px 10px rgba(82, 155, 224, 0.082);
   grid-area: left;
   color: white;
   width: 100%;
   min-width: 315px;
   height: 100%;
-  color: white;
-  background-image: url('../../static/introduce.png');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   background-color: lighten($color: rgba(82, 155, 224, 0.082), $amount: 0);
+
+  &__background {
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+  &__contact {
+    margin-top: 5%;
+  }
   h2 {
     @include box-title;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 0.5em;
-    margin-top: 10%;
   }
   h1 {
     font-family: Khand;
@@ -60,7 +65,35 @@
 }
 // -----------------------MEDIA QUERIES -------------------------
 @include media(mobile-only) {
-  .main-left {
-    background-image: url('../../static/introduce_mobil.png');
+  .main-aside {
+    height: max-content;
+    &__profile {
+      width: 35%;
+      padding: 0 5%;
+      position: absolute;
+      top: 8%;
+      img {
+        width: 100%;
+      }
+    }
+    &__title {
+      position: absolute;
+      width: 65%;
+      top: 0;
+      left: 35%;
+    }
+    &__contact {
+      position: absolute;
+      width: 47%;
+      margin: 0 9%;
+      top: 13%;
+      left: 35%;
+      background-color: darken($color: rgba(8, 70, 129, 0.726), $amount: 3);
+    }
+    &__objetive {
+      position: absolute;
+      visibility: hidden;
+      top: 0;
+    }
   }
 }

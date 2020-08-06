@@ -96,7 +96,7 @@
 // -----------------------MEDIA QUERIES -------------------------
 @include media(mobile-only) {
   .main-cv {
-    grid-template: 500px 500px 1fr / repeat(2, 1fr);
+    grid-template: 10px 1fr 1fr / repeat(2, 1fr);
     grid-template-areas:
       'title title'
       'articlea articleb'

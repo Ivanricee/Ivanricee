@@ -19,7 +19,7 @@ body {
 
 @include media(mobile-only) {
   .container {
-    grid-template: 500px 70px 1fr / 1fr;
+    grid-template: 1fr 70px 1fr / 1fr;
     grid-template-areas:
       'left'
       'nav'
