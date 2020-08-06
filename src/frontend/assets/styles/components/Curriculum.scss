@@ -1,4 +1,5 @@
 @import '../Vars.scss';
+@import '../breakpoints.scss';
 .main-cv {
   @include main;
   grid-template: 10px 1fr / repeat(3, 1fr);
@@ -90,5 +91,15 @@
   }
   .article-c {
     grid-area: articlec;
+  }
+}
+// -----------------------MEDIA QUERIES -------------------------
+@include media(mobile-only) {
+  .main-cv {
+    grid-template: 500px 500px 1fr / repeat(2, 1fr);
+    grid-template-areas:
+      'title title'
+      'articlea articleb'
+      'articlec articlec ';
   }
 }

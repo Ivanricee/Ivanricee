@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
-import '../assets/styles/components/Main-portfolio.scss'
+import '../assets/styles/components/Portfolio.scss'
 import { connect } from 'react-redux'
-import { CSSTransition } from 'react-transition-group'
-import CarouselList from '../components/CarouselList'
+import CarouselList from '../components/PortfolioList'
 import { setActiveMenu } from '../actions'
 
 const Portfolio = (props) => {
@@ -10,23 +9,10 @@ const Portfolio = (props) => {
     props.setActiveMenu(2)
   }, [])
   return (
-    <main className="main--portfolio">
-      <article className="main--portfolio__title">
-        <h1>Portfolio</h1>
-      </article>
-      <article className="main--portfolio__carousel">
-        <CSSTransition
-          transitionName="fade"
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={1000}
-        >
-          <div className="main--portfolio__carousel-cont">
-            <CarouselList />
-          </div>
-        </CSSTransition>
-      </article>
-      <article className="main--portfolio__breakdown">
-        <div className="main--portfolio__breakdown-carou" />
+    <main className="main-portfolio">
+      <article className="main-portfolio__title" />
+      <article className="main-portfolio__list">
+        <CarouselList />
       </article>
     </main>
   )

@@ -9,12 +9,10 @@ const Aside = () => (
     <h1>FRONTEND DEVELOPER</h1>
     <h3 className="main-left__name">IVAN BAUTISTA GUERRERO</h3>
     <h2>CONTACT</h2>
-
     <p>
       <FiMail />
       ivanbautistag@gmail.com
     </p>
-
     <p>
       <FiSmartphone />
       (+52) 55 6129 1646

@@ -1,5 +1,7 @@
 @import './bootstrap_reboot.scss';
 @import './Vars.scss';
+@import './breakpoints.scss';
+
 body {
   line-height: 1;
   background: $body_background;
@@ -13,4 +15,14 @@ body {
   grid-template-areas:
     'left nav'
     'left main';
+}
+
+@include media(mobile-only) {
+  .container {
+    grid-template: 500px 70px 1fr / 1fr;
+    grid-template-areas:
+      'left'
+      'nav'
+      'main';
+  }
 }

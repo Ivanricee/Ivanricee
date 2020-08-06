@@ -1,15 +1,17 @@
 @import '../Vars.scss';
+@import '../breakpoints.scss';
 .main-left {
+  box-shadow: 0.1px 0px 7px 10px rgba(82, 155, 224, 0.082);
   grid-area: left;
   color: white;
   width: 100%;
   min-width: 315px;
-  height: inherit;
+  height: 100%;
   color: white;
   background-image: url('../../static/introduce.png');
   background-size: 100% auto;
   background-repeat: no-repeat;
-
+  background-color: lighten($color: rgba(82, 155, 224, 0.082), $amount: 0);
   h2 {
     @include box-title;
     width: 100%;
@@ -54,5 +56,11 @@
         text-decoration: underline;
       }
     }
+  }
+}
+// -----------------------MEDIA QUERIES -------------------------
+@include media(mobile-only) {
+  .main-left {
+    background-image: url('../../static/introduce_mobil.png');
   }
 }
