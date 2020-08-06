@@ -30,7 +30,7 @@ const Aside = () => (
     </figure>
     <div className="main-aside__title">
       <h1>FRONTEND DEVELOPER</h1>
-      <h3 className="main-left__name">IVAN BAUTISTA GUERRERO</h3>
+      <h3 className="main-aside__name">IVAN BAUTISTA GUERRERO</h3>
     </div>
 
     <div className="main-aside__contact">

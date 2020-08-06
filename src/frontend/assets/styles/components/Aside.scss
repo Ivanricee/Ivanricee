@@ -8,9 +8,8 @@
   min-width: 315px;
   height: 100%;
   background-color: lighten($color: rgba(82, 155, 224, 0.082), $amount: 0);
-
+  position: relative;
   &__background {
-    position: relative;
     img {
       width: 100%;
     }
@@ -18,21 +17,25 @@
   &__contact {
     margin-top: 5%;
   }
-  h2 {
-    @include box-title;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 0.5em;
+  &__title {
+    height: 100%;
+    h2 {
+      @include box-title;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0.5em;
+    }
+    h1 {
+      font-family: Khand;
+      font-weight: bold;
+      padding: 30px 0 0 0;
+      text-align: center;
+      font-size: 2.3em;
+      margin-bottom: 0.2em;
+    }
   }
-  h1 {
-    font-family: Khand;
-    font-weight: bold;
-    padding: 30px 0 0 0;
-    text-align: center;
-    font-size: 2.3em;
-    margin-bottom: 0.2em;
-  }
-  & .main-left__name {
+
+  & .main-aside__name {
     font-family: Khand;
     font-weight: 600;
     font-size: 1.45em;
@@ -71,7 +74,7 @@
       width: 35%;
       padding: 0 5%;
       position: absolute;
-      top: 8%;
+      top: 17%;
       img {
         width: 100%;
       }
@@ -81,12 +84,18 @@
       width: 65%;
       top: 0;
       left: 35%;
+      h1 {
+        font-size: 3em;
+      }
+    }
+    & .main-aside__name {
+      font-size: 2em;
     }
     &__contact {
       position: absolute;
       width: 47%;
       margin: 0 9%;
-      top: 13%;
+      top: 38%;
       left: 35%;
       background-color: darken($color: rgba(8, 70, 129, 0.726), $amount: 3);
     }
