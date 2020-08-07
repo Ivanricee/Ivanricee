@@ -10,13 +10,14 @@ body {
 
 .container {
   display: grid;
-  grid-template: 70px 1fr / minmax(310px, 25%) minmax(724px, 1fr);
+  grid-template: 70px 1fr / minmax(310px, 25%) minmax(475px, 1fr);
   height: 100vh;
   grid-template-areas:
     'left nav'
     'left main';
 }
-
+// media querys
+// reduce min-width
 @include media(mobile-only) {
   .container {
     grid-template: 1fr 70px 1fr / 1fr;

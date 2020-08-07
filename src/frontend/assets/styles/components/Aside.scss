@@ -1,6 +1,8 @@
 @import '../Vars.scss';
 @import '../breakpoints.scss';
 .main-aside {
+  $self: &;
+  position: relative;
   box-shadow: 0.1px 0px 7px 10px rgba(82, 155, 224, 0.082);
   grid-area: left;
   color: white;
@@ -8,23 +10,27 @@
   min-width: 315px;
   height: 100%;
   background-color: lighten($color: rgba(82, 155, 224, 0.082), $amount: 0);
-  position: relative;
   &__background {
     img {
       width: 100%;
     }
   }
-  &__contact {
-    margin-top: 5%;
+  &__profile {
+    position: absolute;
+    margin-top: 36%;
+    width: 100%;
+    height: auto;
+    padding: 0 30%;
+    top: 0;
+    img {
+      width: 100%;
+    }
   }
   &__title {
-    height: 100%;
-    h2 {
-      @include box-title;
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0.5em;
-    }
+    position: absolute;
+    width: 100%;
+    height: max-content;
+    top: 0;
     h1 {
       font-family: Khand;
       font-weight: bold;
@@ -33,18 +39,26 @@
       font-size: 2.3em;
       margin-bottom: 0.2em;
     }
+    #{$self}__name {
+      font-family: Khand;
+      font-weight: 600;
+      font-size: 1.45em;
+      color: #e8f3ff;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  h2 {
+    @include box-title;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 0.5em;
+  }
+  &__contact {
+    margin-top: -25%;
   }
 
-  & .main-aside__name {
-    font-family: Khand;
-    font-weight: 600;
-    font-size: 1.45em;
-    color: #e8f3ff;
-    justify-content: center;
-    margin: 0 0 70% 0;
-    width: 100%;
-    text-align: center;
-  }
   svg {
     margin: 2px 5px 0 0;
   }
@@ -67,20 +81,16 @@
   }
 }
 // -----------------------MEDIA QUERIES -------------------------
+//tablet
 @include media(mobile-only) {
   .main-aside {
     height: max-content;
     &__profile {
-      width: 35%;
-      padding: 0 5%;
-      position: absolute;
-      top: 17%;
-      img {
-        width: 100%;
-      }
+      width: 42%;
+      padding: 0 7%;
+      margin-top: 9%;
     }
     &__title {
-      position: absolute;
       width: 65%;
       top: 0;
       left: 35%;
@@ -88,11 +98,12 @@
         font-size: 3em;
       }
     }
-    & .main-aside__name {
+    &__name {
       font-size: 2em;
     }
     &__contact {
       position: absolute;
+      padding-bottom: 10px;
       width: 47%;
       margin: 0 9%;
       top: 38%;
@@ -103,6 +114,50 @@
       position: absolute;
       visibility: hidden;
       top: 0;
+    }
+  }
+}
+//mobile iphone xs
+@include media(mobile-xs) {
+  .main-aside {
+    $self: &;
+    height: max-content;
+    &__profile {
+      width: 40%;
+      padding: 0 5%;
+    }
+    &__title {
+      width: 65%;
+      top: 0;
+      left: 35%;
+      h1 {
+        font-size: 2.7em;
+      }
+      #{$self}__name {
+        color: #15308b;
+      }
+    }
+    &__contact {
+      visibility: hidden;
+      width: 100%;
+      margin: 1%;
+      top: 0;
+      left: 0;
+      background-color: darken($color: rgba(2, 22, 41, 0.726), $amount: 3);
+    }
+  }
+}
+
+@media only screen and (max-width: 437px) {
+  .main-aside {
+    $self: &;
+    &__title {
+      h1 {
+        font-size: 2.2em;
+      }
+      #{$self}__name {
+        font-size: 0.99em;
+      }
     }
   }
 }

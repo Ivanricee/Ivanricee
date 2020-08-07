@@ -94,12 +94,27 @@
   }
 }
 // -----------------------MEDIA QUERIES -------------------------
-@include media(mobile-only) {
+
+//tablet and desktop content
+@media only screen and (max-width: 1244px) {
   .main-cv {
     grid-template: 10px 1fr 1fr / repeat(2, 1fr);
     grid-template-areas:
       'title title'
       'articlea articleb'
       'articlec articlec ';
+  }
+}
+
+//mobile xs
+
+@include media(desktop) {
+  .main-cv {
+    grid-template: 10px 1fr 1fr 1fr/ 1fr;
+    grid-template-areas:
+      'title '
+      'articlea'
+      'articleb'
+      'articlec';
   }
 }
