@@ -13,12 +13,6 @@ $body_background: linear-gradient(
   rgba(24, 64, 125, 1) 75%
 );
 
-$left_background: url('../assets/introduce_2.png');
-$button_background: linear-gradient(
-  329deg,
-  rgba(223, 127, 145, 1) 0%,
-  rgba(223, 165, 205, 1) 100%
-);
 $color_link: rgb(255, 200, 210);
 $carousel_background: linear-gradient(
   1deg,
@@ -41,11 +35,35 @@ $breakdown_background: linear-gradient(
 $box_title_background: linear-gradient(
   270deg,
   rgba(70, 117, 168, 0.3) 9%,
-  rgba(240, 193, 246, 0.3) 100%
+  rgba(255, 174, 237, 0.3) 100%
 );
 $margen_nav_main: 0 4%;
 
 //mixin
+@mixin button {
+  /*background: linear-gradient(
+    110deg,
+    rgba(223, 127, 145, 1) 0%,
+    rgba(223, 165, 205, 1) 100%
+  );*/
+  font-family: Khand;
+  font-weight: 600;
+  background: rgb(246, 166, 203);
+  background: linear-gradient(
+    0deg,
+    rgba(246, 166, 203, 1) 0%,
+    rgba(231, 152, 174, 1) 100%
+  );
+  box-shadow: -4px 5px 0px -1px rgba(94, 43, 94, 1);
+  color: rgba(94, 43, 94, 1);
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 10px;
+}
 @mixin main {
   display: grid;
   grid-area: main;

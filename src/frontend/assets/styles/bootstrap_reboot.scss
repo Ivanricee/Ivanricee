@@ -136,6 +136,7 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  outline: none;
 }
 
 button,
@@ -153,6 +154,8 @@ html [type='button'],
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
+  outline: none;
+  border: none;
 }
 
 button::-moz-focus-inner,
@@ -161,13 +164,16 @@ button::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
+  outline: none;
+  border: none;
 }
 
 button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: none;
+  border: none;
 }
 
 fieldset {
@@ -404,8 +410,8 @@ label {
 }
 
 button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: none;
+  border: none;
 }
 
 input,
