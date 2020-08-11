@@ -12,6 +12,9 @@ const Aside = () => {
   const handleBtnVisibility = (element) => {
     setVisibility(element)
   }
+  const handleBtnClose = () => {
+    setVisibility('')
+  }
   return (
     <aside className="main-aside">
       <div className="main-aside__background">
@@ -37,7 +40,7 @@ const Aside = () => {
         />
         <button
           type="button"
-          className="main-aside__btn"
+          className="main-aside__btn career"
           onClick={() => handleBtnVisibility('career')}
         >
           CAREER OBJECTIVE
@@ -95,6 +98,13 @@ const Aside = () => {
           <GoLocation />
           Mexico City
         </p>
+        <button
+          type="button"
+          className="main-aside__btn--cerrar contact-close"
+          onClick={handleBtnClose}
+        >
+          Cerrar
+        </button>
       </div>
       <div
         className={
@@ -113,7 +123,13 @@ const Aside = () => {
           communication, adaptability and flexibility to change.
         </p>
         <p> I´m looking for a frontend developer position</p>
-        <p />
+        <button
+          type="button"
+          className="main-aside__btn--cerrar career-close"
+          onClick={handleBtnClose}
+        >
+          Cerrar
+        </button>
       </div>
     </aside>
   )

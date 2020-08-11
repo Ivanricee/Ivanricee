@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Khand:display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap');
-
 $conent-font: 'Titillium Web', sans-serif;
 $nav-font: 'Khand', sans-serif;
 //Variables
@@ -41,11 +38,6 @@ $margen_nav_main: 0 4%;
 
 //mixin
 @mixin button {
-  /*background: linear-gradient(
-    110deg,
-    rgba(223, 127, 145, 1) 0%,
-    rgba(223, 165, 205, 1) 100%
-  );*/
   font-family: Khand;
   font-weight: 600;
   background: rgb(246, 166, 203);
@@ -62,7 +54,7 @@ $margen_nav_main: 0 4%;
   display: inline-block;
   cursor: pointer;
   font-size: 0.9em;
-  padding: 10px;
+  padding: 5px;
 }
 @mixin main {
   display: grid;

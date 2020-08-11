@@ -29,7 +29,8 @@
       width: 100%;
     }
   }
-  &__btn {
+  &__btn,
+  &__btn--cerrar {
     visibility: hidden;
   }
   &__title {
@@ -62,9 +63,14 @@
     margin-bottom: 0.5em;
   }
   &__contact {
-    margin-top: -25%;
+    margin-top: -23%;
+    display: flex;
+    flex-direction: column;
   }
-
+  &__objetive {
+    display: flex;
+    flex-direction: column;
+  }
   svg {
     margin: 2px 5px 0 0;
   }
@@ -101,38 +107,59 @@
       margin-top: 0;
     }
     &__title {
-      width: 65%;
-      left: 35%;
+      width: 68%;
+      left: 32%;
       h1 {
+        width: 100%;
         font-size: 2.9em;
         margin-bottom: 0;
       }
+    }
+    &__btn {
+      @include button;
+      padding: 7px;
+    }
+    & .career {
+      visibility: visible;
+    }
+    &__btn--cerrar {
+      @include button;
+      margin: 10px auto;
+      padding: 5px;
+      font-size: 1em;
+      margin-top: 7px;
+    }
+    & .career-close {
+      visibility: inherit;
     }
     &__name {
       font-size: 2em;
     }
     &__contact {
       position: absolute;
-      padding-bottom: 10px;
       width: 47%;
       margin: 0 9%;
-      top: 38%;
+      top: 31%;
       left: 35%;
       background-color: darken($color: rgba(8, 70, 129, 0.726), $amount: 3);
       p {
         color: white;
       }
       h2 {
-        font-size: 1em;
+        font-size: 0.8em;
+        height: 29px;
       }
     }
     &__objetive {
       position: absolute;
       visibility: hidden;
       top: 0;
+      padding-bottom: 20px;
+      background-color: darken($color: rgba(14, 11, 54, 0.918), $amount: 3);
     }
   }
 }
+
 //mobile iphone xs
 @include media(mobile-xs) {
   .main-aside {
@@ -160,23 +187,28 @@
       }
     }
     &__btn {
-      @include button;
       visibility: visible;
-
       margin: 0 auto;
+      padding: 5px;
+      font-size: 0.8em;
     }
-
+    & .contact-close,
+    & .career-close {
+      visibility: inherit;
+    }
     &__contact {
       visibility: hidden;
       width: 100%;
-      margin: 1%;
       top: 0;
       left: 0;
-      background-color: darken($color: rgba(2, 22, 41, 0.726), $amount: 3);
+      right: 0;
+      margin: 0;
+      background-color: darken($color: rgba(14, 11, 54, 0.918), $amount: 3);
     }
   }
 }
 
+//mobile xs
 @media only screen and (max-width: 437px) {
   .main-aside {
     $self: &;
