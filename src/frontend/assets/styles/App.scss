@@ -20,7 +20,7 @@ body {
 // reduce min-width
 @include media(mobile-only) {
   .container {
-    grid-template: 1fr 70px 1fr / 1fr;
+    grid-template: max-content 70px 1fr / 1fr;
     grid-template-areas:
       'left'
       'nav'

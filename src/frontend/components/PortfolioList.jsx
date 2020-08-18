@@ -1,15 +1,25 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import PortfolioItem from './PortfoliolItem'
 
-import CarouselItem from './PortfoliolItem'
+const PortfolioList = ({ id, categoria, portfolioList }) => {
+  console.log(`data de url id: ${id} categoria: ${categoria} `)
 
-const CarouselList = () => {
-  const carousel = [1, 2, 3, 4, 5, 6]
+  const portfolioCateg = portfolioList.filter(
+    (portfolioItem) => portfolioItem.category === (categoria === 'frontend' ? 1 : 2)
+  )
+  console.log('portafolio filtrado', portfolioCateg)
   return (
     <>
-      {carousel.map((item) => (
-        <CarouselItem imagen="img" key={item} />
+      {portfolioCateg.map((imgItem) => (
+        <PortfolioItem {...imgItem} key={imgItem.id} />
       ))}
     </>
   )
 }
-export default CarouselList
+const mapStateToProps = (state) => {
+  return {
+    portfolioList: state.portfolioList,
+  }
+}
+export default connect(mapStateToProps, null)(PortfolioList)

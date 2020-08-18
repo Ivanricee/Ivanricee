@@ -12,10 +12,13 @@ import { renderRoutes } from 'react-router-config'
 import { StaticRouter } from 'react-router-dom'
 import serverRoutes from '../frontend/routes/serverRoutes'
 import reducer from '../frontend/reducers/index'
-import initialState from '../frontend/initialState'
+//import initialState from '../frontend/initialState'
 import Layout from '../frontend/containers/Layout'
 import getManifest from './getManifest'
 
+//Require a projects DB image for initialState
+const { projectsDb } = require('./utils/db/projectsDb')
+//const bodyParser = require('body-parser')
 //busca el entorno y toma las variables
 dotenv.config()
 const { ENV, PORT } = process.env
@@ -79,7 +82,28 @@ const setResponse = (html, preloadedState, manifest) => {
       </body>
     </html>`
 }
-const renderApp = (req, res) => {
+const renderApp = async (req, res) => {
+  let initialState
+  try {
+    const projects = await Promise.resolve(projectsDb)
+    //res.status(200).json(projects)
+    initialState = {
+      menu: 'frontend',
+      cover:
+        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:good/v1596741394/introduce.png',
+      portfolioList: projects.portfolioList,
+      img_items: projects.img_items,
+    }
+  } catch (err) {
+    initialState = {
+      menu: 'frontend',
+      cover:
+        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:good/v1596741394/introduce.png',
+      portfolioList: [],
+      img_items: [],
+    }
+    console.log(err)
+  }
   const store = createStore(reducer, initialState)
   const preloadedState = store.getState()
   const html = renderToString(
@@ -92,6 +116,8 @@ const renderApp = (req, res) => {
 
   res.send(setResponse(html, preloadedState, req.hashManifest))
 }
+//Ruta para servir el json de los proyectos
+//app.get('/projects', async function (req, res) {})
 //Puede acceder desde todas las rutas posibles
 app.get('*', renderApp)
 

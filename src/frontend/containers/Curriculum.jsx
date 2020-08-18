@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../assets/styles/components/Curriculum.scss'
 import { connect } from 'react-redux'
 import { FaRegCalendarAlt } from 'react-icons/fa'
-import { setActiveMenu } from '../actions'
 
 import Icon from '../components/icon/Icon'
 
 const Curriculum = (props) => {
-  useEffect(() => {
-    props.setActiveMenu(1)
-  }, [])
   return (
     <main className="main-cv">
       <article className="article-a">
@@ -208,8 +204,10 @@ const Curriculum = (props) => {
   )
 }
 
-const mapDispatchToProps = {
-  setActiveMenu,
+const mapStateToProps = (state) => {
+  return {
+    cover: state.cover,
+  }
 }
 
-export default connect(null, mapDispatchToProps)(Curriculum)
+export default connect(mapStateToProps, null)(Curriculum)

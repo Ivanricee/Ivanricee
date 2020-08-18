@@ -1,6 +1,7 @@
 /* eslint-disable operator-linebreak */
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
 import '../assets/styles/components/Aside.scss'
 import { FiMail, FiSmartphone, FiGithub } from 'react-icons/fi'
 import { FaLinkedinIn, FaArtstation } from 'react-icons/fa'
@@ -29,14 +30,14 @@ const Aside = () => {
           />
           <img
             src="https://res.cloudinary.com/ivanrice-c/image/upload/v1596741393/introduce_mobil_o8gs6s.png"
-            alt="introduce background"
+            alt="presentacion de mi sitio"
           />
         </picture>
       </div>
       <figure className="main-aside__profile">
         <img
           src="https://res.cloudinary.com/ivanrice-c/image/upload/v1596746856/Fotoperfil_qd5hqc.png"
-          alt="profile badge"
+          alt="iván bautista"
         />
         <button
           type="button"
@@ -46,7 +47,7 @@ const Aside = () => {
           CAREER OBJECTIVE
         </button>
       </figure>
-      <div className="main-aside__title">
+      <header className="main-aside__title">
         <h1>FRONTEND DEVELOPER</h1>
         <h3 className="main-aside__name">IVAN BAUTISTA GUERRERO</h3>
         <button
@@ -56,7 +57,7 @@ const Aside = () => {
         >
           CONTACT
         </button>
-      </div>
+      </header>
 
       <div
         className={
@@ -74,7 +75,7 @@ const Aside = () => {
           <FiSmartphone />
           (+52) 55 6129 1646
         </p>
-        <a target="_blank" rel="noreferrer" href="https://github.com/ivanrices">
+        <a target="_blank" rel="noreferrer" href="https://github.com/ivanricee">
           <FiGithub />
           /ivanrices
         </a>
@@ -134,5 +135,9 @@ const Aside = () => {
     </aside>
   )
 }
-
-export default Aside
+const mapStateToProps = (state) => {
+  return {
+    cover: state.cover,
+  }
+}
+export default connect(mapStateToProps, null)(Aside)

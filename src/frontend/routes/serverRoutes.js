@@ -11,7 +11,7 @@ const routes = [
   },
   {
     exact: true,
-    path: '/portfolio',
+    path: '/portfolio/:categoria/:id?',
     component: Portfolio,
   },
   {

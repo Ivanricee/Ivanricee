@@ -81,6 +81,7 @@
   }
   a {
     @include parrafo;
+    width: max-content;
     display: flex;
     padding: 0 4%;
     color: $link_color;
@@ -141,7 +142,9 @@
       margin: 0 9%;
       top: 31%;
       left: 35%;
-      background-color: darken($color: rgba(8, 70, 129, 0.726), $amount: 3);
+      background-color: $background_contact_card;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 9px;
       p {
         color: white;
       }
@@ -155,7 +158,9 @@
       visibility: hidden;
       top: 0;
       padding-bottom: 20px;
-      background-color: darken($color: rgba(14, 11, 54, 0.918), $amount: 3);
+      background-color: $background_modal;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 9px;
     }
   }
 }
@@ -203,7 +208,9 @@
       left: 0;
       right: 0;
       margin: 0;
-      background-color: darken($color: rgba(14, 11, 54, 0.918), $amount: 3);
+      background-color: $background_modal;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 9px;
     }
   }
 }

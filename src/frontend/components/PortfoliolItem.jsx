@@ -1,17 +1,14 @@
 import React from 'react'
 
-const Carousel = ({ image }) => {
+const PortfolioItem = ({ id, title, cover, category }) => {
   return (
     <div className="main-portfolio__item">
       <div className="main-portfolio__item-text">
-        <p>SIGEM</p>
+        <p>{`${title}`}</p>
       </div>
-      <img
-        alt="fondo"
-        src="https://i.etsystatic.com/10764890/r/il/4d6a55/1282000866/il_570xN.1282000866_peov.jpg"
-      />
+      <img alt={`${title}`} src={`${cover}`} />
     </div>
   )
 }
 
-export default Carousel
+export default PortfolioItem

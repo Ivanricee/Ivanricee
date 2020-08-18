@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-export const setActiveMenu = (payload) => ({
-  type: 'SET_ACTIVEMENU',
+export const setRouteMenu = (payload) => ({
+  type: 'SET_ROUTEMENU',
   payload,
 })

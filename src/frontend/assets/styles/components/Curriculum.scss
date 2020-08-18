@@ -16,7 +16,8 @@
   }
   a {
     @include parrafo;
-    display: flex;
+    display: block;
+    width: max-content;
     color: $link_color;
     cursor: pointer;
     outline: none;

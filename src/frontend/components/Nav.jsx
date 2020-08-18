@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import { connect } from 'react-redux'
 import '../assets/styles/App.scss'
@@ -10,22 +10,24 @@ const Nav = (props) => {
     <nav>
       <ul>
         <li>
-          <Link to="./" className={`${props.menu === 1 ? 'active' : 'link'}`}>
+          <NavLink exact to="/" className="link" activeClassName="active">
             Curriculum Vitae
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
-            to="./portfolio"
-            className={`${props.menu === 2 ? 'active' : 'link'}`}
+          <NavLink
+            strict
+            to={`/portfolio/${props.menu}`}
+            className="link"
+            activeClassName="active"
           >
             Portafolio
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="./reel" className={`${props.menu === 3 ? 'active' : 'link'}`}>
+          <NavLink exact to="/reel" className="link" activeClassName="active">
             Reel
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

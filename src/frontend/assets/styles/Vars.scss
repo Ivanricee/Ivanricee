@@ -11,23 +11,6 @@ $body_background: linear-gradient(
 );
 
 $color_link: rgb(255, 200, 210);
-$carousel_background: linear-gradient(
-  1deg,
-  rgba(15, 41, 61, 0.95) 0%,
-  rgba(224, 219, 236, 0.3) 100%
-);
-
-$carousel_selected_background: linear-gradient(
-  329deg,
-  rgba(84, 143, 188, 1) 46%,
-  rgba(104, 178, 206, 1) 100%
-);
-
-$breakdown_background: linear-gradient(
-  329deg,
-  rgba(113, 185, 204, 0.04) 13%,
-  rgba(225, 219, 236, 0.2) 100%
-);
 
 $box_title_background: linear-gradient(
   270deg,
@@ -36,6 +19,14 @@ $box_title_background: linear-gradient(
 );
 $margen_nav_main: 0 4%;
 
+$background_modal: darken(
+  $color: rgba(14, 11, 54, 0.918),
+  $amount: 3,
+);
+$background_contact_card: darken(
+  $color: rgba(14, 11, 54, 0.753),
+  $amount: 3,
+);
 //mixin
 @mixin button {
   font-family: Khand;
@@ -76,6 +67,6 @@ $margen_nav_main: 0 4%;
 @mixin parrafo {
   margin: 0.1em;
   line-height: 1.35em;
-  color: lighten(#bdc1cf, $amount: 1);
+  color: lighten(#bdc1cf, $amount: 5);
   font-size: 0.99em;
 }
