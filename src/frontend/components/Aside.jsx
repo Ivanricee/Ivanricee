@@ -18,7 +18,7 @@ const Aside = () => {
   }
   return (
     <aside className="main-aside">
-      <div className="main-aside__background">
+      <section className="main-aside__background">
         <picture>
           <source
             media="(max-width: 768px)"
@@ -33,7 +33,7 @@ const Aside = () => {
             alt="presentacion de mi sitio"
           />
         </picture>
-      </div>
+      </section>
       <figure className="main-aside__profile">
         <img
           src="https://res.cloudinary.com/ivanrice-c/image/upload/v1596746856/Fotoperfil_qd5hqc.png"
@@ -58,8 +58,7 @@ const Aside = () => {
           CONTACT
         </button>
       </header>
-
-      <div
+      <section
         className={
           visibility === 'contact'
             ? 'main-aside__contact visibility'
@@ -106,8 +105,8 @@ const Aside = () => {
         >
           Cerrar
         </button>
-      </div>
-      <div
+      </section>
+      <section
         className={
           visibility === 'career'
             ? 'main-aside__objetive visibility'
@@ -131,7 +130,7 @@ const Aside = () => {
         >
           Cerrar
         </button>
-      </div>
+      </section>
     </aside>
   )
 }

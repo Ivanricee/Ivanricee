@@ -1,11 +1,48 @@
 @import './bootstrap_reboot.scss';
 @import './Vars.scss';
 @import './breakpoints.scss';
-
+html {
+  height: 100%;
+}
 body {
   line-height: 1;
   background: $body_background;
   font-size: 16px;
+  height: 100%;
+  & #modal {
+    position: absolute;
+    display: flex;
+    background: $background_modal;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    min-height: 100%;
+    z-index: 100;
+    flex-wrap: wrap;
+    img {
+      width: 100%;
+      padding: 0 7px;
+    }
+    & .modal__title {
+      @include box_title;
+    }
+    & .modal__icon {
+      position: absolute;
+      color: white;
+      font-size: 2em;
+      right: 25px;
+      top: 25px;
+      cursor: pointer;
+    }
+    & .modal__btn--cerrar {
+      @include button;
+      padding: 7px;
+      margin: 25px auto 10px auto;
+      font-size: 1.4em;
+    }
+  }
 }
 
 .container {

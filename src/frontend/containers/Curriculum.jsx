@@ -2,18 +2,16 @@ import React from 'react'
 import '../assets/styles/components/Curriculum.scss'
 import { connect } from 'react-redux'
 import { FaRegCalendarAlt } from 'react-icons/fa'
-
 import Icon from '../components/icon/Icon'
 
 const Curriculum = (props) => {
   return (
     <main className="main-cv">
-      <article className="article-a">
+      <section className="section-a">
         <h2>
           <Icon icon="exp" />
           WORK EXPERIENCE
         </h2>
-
         <h3 className="main-cv__subtitle">Fullstack Developer</h3>
         <a href="http://campus-virtuales.com/" target="_blank" rel="noreferrer">
           <h4>Campus Virtuales</h4>
@@ -21,7 +19,6 @@ const Curriculum = (props) => {
         <small>
           <FaRegCalendarAlt /> Oct 2013 - 2019
         </small>
-
         <ul>
           <li>
             <p>Frontend development of SCORM learning resources for moodle.</p>
@@ -53,7 +50,6 @@ const Curriculum = (props) => {
             </ul>
           </li>
         </ul>
-
         <h3 className="main-cv__subtitle">Professional practice</h3>
         <a href="http://www.portomx.com.mx/" target="_blank" rel="noreferrer">
           <h4>PortoMx</h4>
@@ -61,7 +57,6 @@ const Curriculum = (props) => {
         <small>
           <FaRegCalendarAlt /> 2012 – Feb 2013.
         </small>
-
         <ul>
           <li>
             <p>Migration of a MySQL database with Stored procedures.</p>
@@ -70,8 +65,8 @@ const Curriculum = (props) => {
             <p>Php training</p>
           </li>
         </ul>
-      </article>
-      <article className="article-b">
+      </section>
+      <section className="section-b">
         <h2>
           <Icon icon="portfolio" />
           EDUCATION
@@ -100,7 +95,6 @@ const Curriculum = (props) => {
             <p>Unit tests with Jest.</p>
           </li>
         </ul>
-
         <h3 className="main-cv__subtitle">Elephant VFX</h3>
         <ul>
           <li>Tracking.</li>
@@ -109,7 +103,6 @@ const Curriculum = (props) => {
           <li>Redshift render.</li>
           <li>Image-based lighting.</li>
         </ul>
-
         <h3 className="main-cv__subtitle">
           Licenciatura en Diseño, Animación y Arte Digital.
         </h3>
@@ -119,7 +112,6 @@ const Curriculum = (props) => {
         <small>
           <FaRegCalendarAlt /> 2014 - 2017
         </small>
-
         <h3 className="main-cv__subtitle">T.S.U. Sistemas Informáticos.</h3>
         <a href="http://www.utn.edu.mx/" target="_blank" rel="noreferrer">
           <h4>Universidad Tecnológica de Nezahualcóyotl.</h4>
@@ -127,8 +119,8 @@ const Curriculum = (props) => {
         <small>
           <FaRegCalendarAlt /> 2011 - 2012
         </small>
-      </article>
-      <article className="article-c">
+      </section>
+      <section className="section-c">
         <h2>
           <Icon icon="skill" />
           ADDITIONAL INFORMATION
@@ -136,70 +128,49 @@ const Curriculum = (props) => {
         <p>05/Apr/1992</p>
         <p>Spanish: native </p>
         <p>English: intermediate </p>
-
         <h3 className="main-cv__subtitle">Web Development</h3>
-        <div className="article__wrapper-span">
+        <div className="section__wrapper-span">
           <span>JavaScript.</span>
-
           <span>React js, Redux and Context.</span>
-
           <span>Angular 2.</span>
-
           <span>Html 5.</span>
-
           <span>Css</span>
           <span>BEM</span>
           <span> Less</span>
           <span> Sass</span>
           <span> Grid</span>
           <span>Flexbox</span>
-
           <span>Bootstrap.</span>
           <span>UI/UX</span>
           <span>Node.js with Express.</span>
-
           <span>Php.</span>
-
           <span>Jest.</span>
-
           <span>Git.</span>
-
           <span>Visual Studio Code.</span>
-
           <span>SCRUM</span>
           <span>Research</span>
         </div>
-
         <h3 className="main-cv__subtitle">3D modeling and texturing</h3>
-        <div className="article__wrapper-span">
+        <div className="section__wrapper-span">
           <span>Autodesk Maya.</span>
-
           <span>Zbrush.</span>
-
           <span>Rizom Uv.</span>
-
           <span>The Foundry Mari.</span>
-
           <span>Substance Painter.</span>
-
           <span>Photoshop.</span>
-
           <span>Arnold 5 render.</span>
-
           <span>Redshift render.</span>
-
           <span>Unreal Engine (Look-Dev).</span>
         </div>
-
         <h3 className="main-cv__subtitle">Hobbies</h3>
-        <div className="article__icon">
+        <div className="section__icon">
           <Icon icon="design" />
           <Icon icon="kindle" />
           <Icon icon="piano" />
           <Icon icon="videogame" />
           <Icon icon="box" />
         </div>
-      </article>
+      </section>
     </main>
   )
 }

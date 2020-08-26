@@ -5,7 +5,7 @@
   grid-template: 10px 1fr / repeat(3, 1fr);
   grid-template-areas:
     'title title title'
-    'articlea articleb articlec';
+    'sectiona sectionb sectionc';
   grid-column-gap: 1em;
   color: white;
   &__title-page {
@@ -29,7 +29,7 @@
     }
   }
 
-  article {
+  section {
     h2 {
       @include box-title;
     }
@@ -63,7 +63,7 @@
       padding: 0 0.7em 0 1.2em;
     }
 
-    & .article__wrapper-span {
+    & .section__wrapper-span {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -75,7 +75,7 @@
       padding: 3px 6px;
       background-color: rgba($color: #ffffff, $alpha: 0.1);
     }
-    .article__icon {
+    .section__icon {
       display: flex;
       justify-content: space-around;
       svg {
@@ -84,14 +84,14 @@
       }
     }
   }
-  .article-a {
-    grid-area: articlea;
+  .section-a {
+    grid-area: sectiona;
   }
-  .article-b {
-    grid-area: articleb;
+  .section-b {
+    grid-area: sectionb;
   }
-  .article-c {
-    grid-area: articlec;
+  .section-c {
+    grid-area: sectionc;
   }
 }
 // -----------------------MEDIA QUERIES -------------------------
@@ -102,8 +102,8 @@
     grid-template: 10px 1fr 1fr / repeat(2, 1fr);
     grid-template-areas:
       'title title'
-      'articlea articleb'
-      'articlec articlec ';
+      'sectiona sectionb'
+      'sectionc sectionc ';
   }
 }
 
@@ -114,10 +114,10 @@
     grid-template: 10px 1fr 1fr 1fr/ 1fr;
     grid-template-areas:
       'title '
-      'articlea'
-      'articleb'
-      'articlec';
-    .article-c {
+      'sectiona'
+      'sectionb'
+      'sectionc';
+    .section-c {
       margin-top: 5%;
     }
   }

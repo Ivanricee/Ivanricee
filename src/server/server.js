@@ -9,7 +9,7 @@ import { Provider } from 'react-redux'
 import { renderToString } from 'react-dom/server'
 import { createStore } from 'redux'
 import { renderRoutes } from 'react-router-config'
-import { StaticRouter } from 'react-router-dom'
+import { StaticRouter } from 'react-router'
 import serverRoutes from '../frontend/routes/serverRoutes'
 import reducer from '../frontend/reducers/index'
 //import initialState from '../frontend/initialState'
@@ -53,10 +53,10 @@ if (ENV === 'development') {
 }
 
 const setResponse = (html, preloadedState, manifest) => {
-  const mainStyles = manifest ? manifest['main.css'] : 'assets/app.css'
-  const vendorStyles = manifest ? manifest['vendors.css'] : 'assets/vendors.app.css'
-  const mainBuild = manifest ? manifest['main.js'] : 'assets/app.js'
-  const vendorBuild = manifest ? manifest['vendors.js'] : 'assets/vendor.js'
+  const mainStyles = manifest ? manifest['main.css'] : '/assets/app.css'
+  const vendorStyles = manifest ? manifest['vendors.css'] : '/assets/vendors.app.css'
+  const mainBuild = manifest ? manifest['main.js'] : '/assets/app.js'
+  const vendorBuild = manifest ? manifest['vendors.js'] : '/assets/vendor.js'
 
   return `<!DOCTYPE html>
     <html lang="en">
@@ -89,6 +89,7 @@ const renderApp = async (req, res) => {
     //res.status(200).json(projects)
     initialState = {
       menu: 'frontend',
+      modal: false,
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:good/v1596741394/introduce.png',
       portfolioList: projects.portfolioList,
@@ -97,6 +98,7 @@ const renderApp = async (req, res) => {
   } catch (err) {
     initialState = {
       menu: 'frontend',
+      modal: false,
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:good/v1596741394/introduce.png',
       portfolioList: [],

@@ -86,7 +86,7 @@
     position: relative;
     border-radius: 10px;
     img {
-      width: 100%;
+      width: 264.5px;
       max-height: 250px;
       border-radius: inherit;
     }
@@ -121,4 +121,29 @@
 .main--reel {
   @include main;
 }
+
+//------------------------- MEDIA QUERIES -------------------
+
+@media only screen and (max-width: 1710px) {
+  .main-portfolio {
+    &__list {
+      width: 888px;
+    }
+  }
+}
+@media only screen and (max-width: 1308px) {
+  .main-portfolio {
+    &__list {
+      width: 588px;
+    }
+  }
+}
+@media only screen and (max-width: 934px) {
+  .main-portfolio {
+    &__list {
+      width: 288px;
+    }
+  }
+}
+
 //-------------------------  ANIMATION  ----------

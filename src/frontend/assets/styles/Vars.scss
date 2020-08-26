@@ -32,20 +32,15 @@ $background_contact_card: darken(
   font-family: Khand;
   font-weight: 600;
   background: rgb(246, 166, 203);
-  background: linear-gradient(
-    0deg,
-    rgba(246, 166, 203, 1) 0%,
-    rgba(231, 152, 174, 1) 100%
-  );
-  box-shadow: -4px 5px 0px -1px rgba(94, 43, 94, 1);
+  background: linear-gradient(0deg, #ecbdd3 0%, #db819a 100%);
+  box-shadow: -4px 5px 4px 0px #663e66;
   color: rgba(94, 43, 94, 1);
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  font-size: 0.9em;
-  padding: 5px;
+  font-size: 1em;
 }
 @mixin main {
   display: grid;

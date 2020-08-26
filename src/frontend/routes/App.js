@@ -7,7 +7,7 @@ import Reel from '../containers/Reel'
 import NotFound from '../containers/NotFound'
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/">
     <Layout>
       <Switch>
         <Route exact path="/" component={Curriculum} />
