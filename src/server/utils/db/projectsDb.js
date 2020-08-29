@@ -291,6 +291,18 @@ const projectsDb = {
       src: `https://res.cloudinary.com/ivanrice-c/image/upload${PHOTO_EDIT}/v1598466046/portfolio/saas/CONSULTA_z88uti.png`,
       alt: '',
     },
+    {
+      id: 1,
+      idPortfolioList: 5,
+      src: `https://res.cloudinary.com/ivanrice-c/image/upload${PHOTO_EDIT}/v1598668082/portfolio/model/ivan-bautista-nave-final_t8ly4e.jpg`,
+      alt: '',
+    },
+    {
+      id: 2,
+      idPortfolioList: 5,
+      src: `https://res.cloudinary.com/ivanrice-c/image/upload${PHOTO_EDIT}/v1598668229/portfolio/model/ivan-bautista-spec_hewg6x.jpg`,
+      alt: '',
+    },
   ],
 }
 
