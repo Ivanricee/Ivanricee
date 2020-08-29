@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import '../assets/styles/components/Aside.scss'
-import { FiMail, FiSmartphone, FiGithub } from 'react-icons/fi'
+import { FiGithub } from 'react-icons/fi'
 import { FaLinkedinIn, FaArtstation } from 'react-icons/fa'
 import { GoLocation } from 'react-icons/go'
 
@@ -66,14 +66,6 @@ const Aside = () => {
         }
       >
         <h2>CONTACT</h2>
-        <p>
-          <FiMail />
-          ivanbautistag@gmail.com
-        </p>
-        <p>
-          <FiSmartphone />
-          (+52) 55 6129 1646
-        </p>
         <a target="_blank" rel="noreferrer" href="https://github.com/ivanricee">
           <FiGithub />
           /ivanrices
