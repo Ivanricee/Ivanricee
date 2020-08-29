@@ -33,7 +33,7 @@ module.exports = {
       name:true,
       cacheGroups:{
         vendors:{
-          //name:'vendors', al importar dependencias dinamicas tiene problemas por el nombre vendors
+          name:'vendors', //al importar dependencias dinamicas tiene problemas por el nombre vendors
           chunks: 'all',
           reuseExistingChunk: true,
           priority:1,

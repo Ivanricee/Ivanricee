@@ -9,9 +9,8 @@ const ItemImage = ({ src, alt, id }) => {
 
   useEffect(() => {
     Promise.resolve(
-      typeof window.IntersectionObserver !== 'undefined'
-        ? window.InteractionOberver
-        : import('intersection-observer')
+      typeof window.IntersectionObserver !== 'undefined' && window.InteractionOberver
+      //: import('intersection-observer')
     ).then(() => {
       const observer = new window.IntersectionObserver(function (entries) {
         const { isIntersecting } = entries[0]
