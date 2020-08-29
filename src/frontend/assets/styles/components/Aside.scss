@@ -14,6 +14,7 @@
     visibility: visible;
   }
   &__background {
+    min-height: 394px;
     img {
       width: 100%;
     }
@@ -107,6 +108,9 @@
       padding: 0 7%;
       margin-top: 0;
     }
+    &__background {
+      min-height: 325px;
+    }
     &__title {
       width: 68%;
       left: 32%;
@@ -170,14 +174,19 @@
   .main-aside {
     $self: &;
     height: max-content;
+    &__background {
+      min-height: 172px;
+    }
     &__profile {
-      width: 40%;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      width: 35%;
       padding: 0 5%;
       img {
         padding-bottom: 7%;
       }
     }
     &__title {
+      background-color: rgba($color: #000000, $alpha: 0.3);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -188,7 +197,7 @@
         padding: 0;
       }
       #{$self}__name {
-        color: #15308b;
+        color: #d9e0e7;
       }
     }
     &__btn {

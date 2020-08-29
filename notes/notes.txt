@@ -1,7 +1,7 @@
 # Animacion --------------------------------------------
 
 # Usamos:
-  %%% npm react-transition-group
+  %%% npm install react-transition-group --save
   Reacciona cuando queremos cambiar algo de nuestra pagina
 # importamos dentro de nuestro componentes
   import 
@@ -12,7 +12,45 @@ appear -> configura la animacion inicial cuando cargamos por primera vez
 onEnter -> cuando cuando entra a escena
 onExited -> animacion cuando sale de escena
 
-# Tiempo de la transision como propiedad
-# Definimos el tiempo para que la animacion deje de ejecutarse y se elimine
-  para proteger el renidmiento de la app
-transitionEnterTimeout,transitionLeaveTimeout
+The first class is applied and then a second 
+*-active class in order to activate the CSS transition. 
+After the transition, matching 
+*-done class names are applied to persist the transition state.
+
+https://blog.bitsrc.io/animating-reactjs-with-react-transition-group-2af6c87cab0c
+
+-----------------------------
+hooks
+useEffect:  Se ejecuta en cada renderizado del componente asi tambien como 
+            su return saneador para limpiar.
+
+            el segundo valor que recibe es para coontrolar en que momento 
+            queremos que se ejecute nuevamente, y esto sera cuando esa propiedad 
+            cambie. Al terminar tambien ejecutara su return.
+-------------------------------------------------------------
+intersectionObserver:
+
+Recibe todas las entradas que esten en nuestro viewport (entries)
+    const observer = new window.IntersectionObserver(function (entries) {
+        console.log(entries)
+    })
+Para usarlo
+observer.observe(elemento que vamos a observar)
+
+Retorna un array de 1 posicion (IntersectionObserverEntry)
+---------------- polyfill
+problema al instalar la dependecia @babel/plugin-syntax-dynamic-import.
+El 4 de Julio de 2019 en la versión 7.5.0 de babel esta característica se añadió al paquete 
+@babel/preset-env
+
+npm install intersection-observer
+En este proyecto estoy dividiendo mis dependencias y codigo por chunks
+Asi que causa un problema con webpack y el name: "vendors"
+quite el name y ahora permite instalar dependencias dinamicas
+--------------------------------------------------------------------------------------------
+Para usar la historia en un componente importamos
+  # import { useHistory } from 'react-router-dom'
+lo asignamos
+  # const history = useHistory()
+Y lo Usamos
+  # history.goBack()  

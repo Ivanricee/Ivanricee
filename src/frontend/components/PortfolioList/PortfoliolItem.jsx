@@ -11,11 +11,17 @@ const PortfolioItem = ({
   id,
   title,
   cover,
-  category,
+  categoria,
   modal,
   setModalOpen,
 }) => {
-  const handleModalItem = () => setModalOpen(true)
+  const handleModalItem = () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+    })
+    return setModalOpen(true)
+  }
 
   useEffect(() => {
     if (idPortfolioList !== 0 && idPortfolioList === id) {
@@ -23,19 +29,16 @@ const PortfolioItem = ({
     }
   }, [])
 
-  const URL =
-    idPortfolioList === Number(0)
-      ? `${category === 1 ? 'frontend' : 'model'}/${id}`
-      : `${id}`
+  const URL = idPortfolioList === Number(0) ? `${categoria}/${id}` : `${id}`
   return (
     <>
-      <NavLink exact to={URL}>
-        <div
-          role="button"
-          tabIndex="0"
-          className="main-portfolio__item"
-          onClick={handleModalItem}
-        >
+      <NavLink
+        exact
+        to={URL}
+        className="main-portfolio__item"
+        onClick={handleModalItem}
+      >
+        <div>
           <div className="main-portfolio__item-text">
             <p>{`${title}`}</p>
           </div>
@@ -44,7 +47,12 @@ const PortfolioItem = ({
       </NavLink>
       {modal && idPortfolioList === id && (
         <Portal id="modal">
-          <ModalItem idPortfolioList={idPortfolioList} title={title} key={id} />
+          <ModalItem
+            idPortfolioList={idPortfolioList}
+            title={title}
+            key={id}
+            categoria={categoria}
+          />
         </Portal>
       )}
     </>

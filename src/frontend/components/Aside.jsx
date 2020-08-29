@@ -22,21 +22,21 @@ const Aside = () => {
         <picture>
           <source
             media="(max-width: 768px)"
-            srcSet="https://res.cloudinary.com/ivanrice-c/image/upload/v1596741393/introduce_mobil_o8gs6s.png"
+            srcSet="https://res.cloudinary.com/ivanrice-c/image/upload/dpr_auto,q_auto:good/v1598654998/fondo_landscape_hvk9j7.png"
           />
           <source
             media="(min-width: 769px)"
-            srcSet="https://res.cloudinary.com/ivanrice-c/image/upload/v1596741394/introduce.png"
+            srcSet="https://res.cloudinary.com/ivanrice-c/image/upload/dpr_auto,q_auto:good/v1598654253/fondo_portrait_y8w285.png"
           />
           <img
-            src="https://res.cloudinary.com/ivanrice-c/image/upload/v1596741393/introduce_mobil_o8gs6s.png"
+            src="https://res.cloudinary.com/ivanrice-c/image/upload/dpr_auto,q_auto:good/v1598654998/fondo_landscape_hvk9j7.png"
             alt="presentacion de mi sitio"
           />
         </picture>
       </section>
       <figure className="main-aside__profile">
         <img
-          src="https://res.cloudinary.com/ivanrice-c/image/upload/v1596746856/Fotoperfil_qd5hqc.png"
+          src="https://res.cloudinary.com/ivanrice-c/image/upload/dpr_auto,q_auto:good/v1596746856/Fotoperfil_qd5hqc.png"
           alt="iván bautista"
         />
         <button

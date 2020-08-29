@@ -13,6 +13,7 @@ const PortfolioList = ({ idPortfolioList, categoria, portfolioList }) => {
       {portfolioCateg.map((portfolioItem) => (
         <PortfolioItem
           {...portfolioItem}
+          categoria={categoria}
           key={portfolioItem.id}
           idPortfolioList={idPortfolioList}
         />

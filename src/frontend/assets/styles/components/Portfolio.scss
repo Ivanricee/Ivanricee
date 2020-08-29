@@ -64,30 +64,32 @@
     padding: 0;
     img {
       position: relative;
-      top: 30px;
-      left: 30px;
+      top: 15px;
+      left: 15px;
     }
     #{$self}__item-text {
       //  position: absolute;
-      top: 30px;
-      bottom: -30px;
-      right: -30px;
-      left: 30px;
+      top: 15px;
+      bottom: -15px;
+      right: -15px;
+      left: 15px;
       z-index: 1;
     }
   }
   &__item {
+    box-sizing: border-box;
     background-color: rgba($color: #ffffff, $alpha: 0.1);
     //box-shadow: 0.1px 0px 7px 10px rgba(167, 82, 224, 0.082);
     cursor: pointer;
     padding: 8px;
     border-radius: 5px;
-    max-width: 280px;
+    width: 264.5px;
+    min-height: 211px;
     position: relative;
     border-radius: 10px;
     img {
-      width: 264.5px;
-      max-height: 250px;
+      width: 100%;
+      height: auto;
       border-radius: inherit;
     }
     #{$self}__item-text {

@@ -54,7 +54,7 @@ if (ENV === 'development') {
 
 const setResponse = (html, preloadedState, manifest) => {
   const mainStyles = manifest ? manifest['main.css'] : '/assets/app.css'
-  const vendorStyles = manifest ? manifest['vendors.css'] : '/assets/vendors.app.css'
+  //const vendorStyles = manifest ? manifest['vendors.css'] : '/assets/vendors.app.css'
   const mainBuild = manifest ? manifest['main.js'] : '/assets/app.js'
   const vendorBuild = manifest ? manifest['vendors.js'] : '/assets/vendor.js'
 
@@ -63,10 +63,35 @@ const setResponse = (html, preloadedState, manifest) => {
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;600;700&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap" rel="stylesheet">         
-        <link  rel="stylesheet" type="text/css" href="${mainStyles}">
-        <link  rel="stylesheet" type="text/css" href="${vendorStyles}">
+        <style>
+        body{
+          background-color: blue;
+        }
+        .main-portfolio__item{
+          width: 264.5px;
+          min-height: 211px;
+          position: relative;
+          background-color: red;
+        }
+
+        .main-aside__background {
+          min-height: 394px;
+        }
+        .main-aside__background img {
+          width: 100%;
+        }
+        @media only screen and (max-width: 768px) {
+          .main-aside__background {
+            min-height: 324px;
+          }
+        }
+        @media only screen and (max-width: 600px) {
+          @content;
+          .main-aside__background {
+            min-height: 172px;
+          }
+        }
+        </style>
         <title>Ivanrice</title>
       </head>
       <body>
@@ -77,6 +102,9 @@ const setResponse = (html, preloadedState, manifest) => {
           '\\u003c'
         )}
         </script>
+        <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <link  rel="stylesheet" type="text/css" href="${mainStyles}">
         <script src="${mainBuild}" type="text/javascript"></script>
         <script src="${vendorBuild}" type="text/javascript"></script>
       </body>

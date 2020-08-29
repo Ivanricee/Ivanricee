@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react'
-import { withRouter, NavLink } from 'react-router-dom'
-import { useParams } from 'react-router'
+import { NavLink, useHistory } from 'react-router-dom'
+import { useParams, Redirect } from 'react-router'
 import '../assets/styles/components/Portfolio.scss'
 import { connect } from 'react-redux'
 import PortfolioList from '../components/PortfolioList'
-import { setRouteMenu } from '../actions'
+import { setRouteMenu, setModalOpen } from '../actions'
 
 const Portfolio = (props) => {
+  const history = useHistory()
   //para saber en que momento se establecio la ruto
   //y evitar el renderizado doble
   const [routeState, setRouteState] = useState(false)
@@ -17,14 +18,33 @@ const Portfolio = (props) => {
     if (categoria === 'frontend' || categoria === 'model') {
       props.setRouteMenu(categoria)
       setRouteState(true)
-    } else props.history.push('/NotFound')
+    } else history.push('/NotFound')
   }, [])
+
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.keyCode === 27) {
+        props.setModalOpen(false)
+      }
+    }
+    if (props.modal) {
+      document.addEventListener('keydown', onKeyDown)
+    }
+
+    return () => {
+      if (props.modal) {
+        document.removeEventListener('keydown', onKeyDown)
+      }
+    }
+  }, [props.modal === true])
 
   const setRoute = (categoriaLink) => {
     props.setRouteMenu(categoriaLink)
     setRouteState(true)
   }
-
+  if (props.modal === false && idPortfolioList) {
+    return <Redirect to={`/portfolio/${categoria}`} />
+  }
   return (
     <>
       {routeState && (
@@ -66,7 +86,11 @@ const Portfolio = (props) => {
   )
 }
 
+const mapStateToProps = (state) => {
+  return { modal: state.modal }
+}
 const mapDispatchToProps = {
   setRouteMenu,
+  setModalOpen,
 }
-export default withRouter(connect(null, mapDispatchToProps)(Portfolio))
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio)
