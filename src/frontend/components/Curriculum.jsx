@@ -1,13 +1,27 @@
 import React from 'react'
-import '../assets/styles/components/Curriculum.scss'
 import { connect } from 'react-redux'
 import { FaRegCalendarAlt } from 'react-icons/fa'
-import Icon from '../components/icon/Icon'
+import Icon from './icon/Icon'
 
 const Curriculum = (props) => {
   return (
-    <main className="main-cv">
-      <section className="section-a">
+    <>
+      <h1 className="main__title">CURRICULUM</h1>
+      <section className="main-cv__section-career">
+        <div>
+          <h2>CAREER OBJETIVE</h2>
+          <p>
+            I am a frontend developer in JavaScript, with 5 years of experience as
+            fullstack developer. I have more experience in educational sector.
+          </p>
+          <p>
+            I am characterized by my teamwork and collaboration, successful
+            communication, adaptability and flexibility to change.
+          </p>
+          <p> I´m looking for a frontend developer position</p>
+        </div>
+      </section>
+      <section className="main-cv__section-a">
         <h2>
           <Icon icon="exp" />
           WORK EXPERIENCE
@@ -66,34 +80,20 @@ const Curriculum = (props) => {
           </li>
         </ul>
       </section>
-      <section className="section-b">
+      <section className="main-cv__section-b">
         <h2>
           <Icon icon="portfolio" />
           EDUCATION
         </h2>
         <h3 className="main-cv__subtitle">Platzi</h3>
         <ul>
-          <li>
-            <p>Git.</p>
-          </li>
-          <li>
-            <p>JavaScript language.</p>
-          </li>
-          <li>
-            <p>React, React Router, Redux thunk, React context and hooks.</p>
-          </li>
-          <li>
-            <p>Backend in Node.js, Express and MongoDB.</p>
-          </li>
-          <li>
-            <p>Passport authentication.</p>
-          </li>
-          <li>
-            <p>Backend and Frontend integration.</p>
-          </li>
-          <li>
-            <p>Unit tests with Jest.</p>
-          </li>
+          <li>Git.</li>
+          <li>JavaScript language.</li>
+          <li>React, React Router, Redux thunk, React context and hooks.</li>
+          <li>Backend in Node.js, Express and MongoDB.</li>
+          <li>Passport authentication.</li>
+          <li>Backend and Frontend integration.</li>
+          <li>Unit tests with Jest.</li>
         </ul>
         <h3 className="main-cv__subtitle">Elephant VFX</h3>
         <ul>
@@ -120,16 +120,22 @@ const Curriculum = (props) => {
           <FaRegCalendarAlt /> 2011 - 2012
         </small>
       </section>
-      <section className="section-c">
+      <section className="main-cv__section-c">
         <h2>
           <Icon icon="skill" />
           ADDITIONAL INFORMATION
         </h2>
-        <p>05/Apr/1992</p>
-        <p>Spanish: native </p>
-        <p>English: intermediate </p>
+        <p>
+          <b>05/Apr/1992</b>
+        </p>
+        <p>
+          <b>Spanish: </b>native
+        </p>
+        <p>
+          <b>English: </b>intermediate
+        </p>
         <h3 className="main-cv__subtitle">Web Development</h3>
-        <div className="section__wrapper-span">
+        <div className="main-cv__section__wrapper-span">
           <span>JavaScript.</span>
           <span>React js, Redux and Context.</span>
           <span>Angular 2.</span>
@@ -151,7 +157,7 @@ const Curriculum = (props) => {
           <span>Research</span>
         </div>
         <h3 className="main-cv__subtitle">3D modeling and texturing</h3>
-        <div className="section__wrapper-span">
+        <div className="main-cv__section__wrapper-span">
           <span>Autodesk Maya.</span>
           <span>Zbrush.</span>
           <span>Rizom Uv.</span>
@@ -163,15 +169,30 @@ const Curriculum = (props) => {
           <span>Unreal Engine (Look-Dev).</span>
         </div>
         <h3 className="main-cv__subtitle">Hobbies</h3>
-        <div className="section__icon">
-          <Icon icon="design" />
-          <Icon icon="kindle" />
-          <Icon icon="piano" />
-          <Icon icon="videogame" />
-          <Icon icon="box" />
+        <div className="main-cv__section__icon">
+          <div>
+            <Icon icon="design" />
+            <span>Painting.</span>
+          </div>
+          <div>
+            <Icon icon="kindle" />
+            <span>reading.</span>
+          </div>
+          <div>
+            <Icon icon="piano" />
+            <span>Music.</span>
+          </div>
+          <div>
+            <Icon icon="videogame" />
+            <span>videogames.</span>
+          </div>
+          <div>
+            <Icon icon="box" />
+            <span>Boxing.</span>
+          </div>
         </div>
       </section>
-    </main>
+    </>
   )
 }
 

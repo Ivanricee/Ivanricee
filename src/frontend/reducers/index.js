@@ -1,6 +1,6 @@
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'SET_ROUTEMENU':
+    case 'SET_HASHMENU':
       return {
         ...state, //retorna estado de la app
         menu: action.payload, //cambia el estado
@@ -9,6 +9,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         modal: action.payload,
+      }
+    case 'SET_PORTFOLIO_MENU':
+      return {
+        ...state,
+        portfolioMenu: action.payload,
       }
     default:
       return state

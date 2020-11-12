@@ -1,4 +1,4 @@
-/*category 1: frontend, 2: model*/
+/*categories ->  1: frontend, 2: model*/
 const PHOTO_EDIT = '/f_auto,dpr_auto,q_auto:good'
 const projectsDb = {
   portfolioList: [
@@ -8,6 +8,7 @@ const projectsDb = {
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597355406/portfolio/uiux_courses/cover_tvtvpb.jpg',
       category: 1,
+      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ const projectsDb = {
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597354705/portfolio/register/cover_jjaqkq.jpg',
       category: 1,
+      tools: ['angular', 'html', 'php', 'css', 'bootstrap', 'mysql'],
     },
     {
       id: 3,
@@ -22,6 +24,7 @@ const projectsDb = {
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597354032/portfolio/sigem/cover_iva5vx.jpg',
       category: 1,
+      tools: ['react', 'html', 'php', 'css', 'bootstrap'],
     },
     {
       id: 4,
@@ -29,6 +32,7 @@ const projectsDb = {
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597357629/portfolio/saas/cover_qhrryd.jpg',
       category: 1,
+      tools: ['html', 'php', 'jquery', 'css', 'bootstrap', 'mysql'],
     },
     {
       id: 5,
@@ -36,6 +40,31 @@ const projectsDb = {
       cover:
         'https://cdnb.artstation.com/p/assets/images/images/027/424/717/20200607002852/smaller_square/ivan-bautista-nave-final.jpg?1591507733',
       category: 2,
+      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
+    },
+    {
+      id: 6,
+      title: 'Registro UNAM - UI/UX',
+      cover:
+        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597354705/portfolio/register/cover_jjaqkq.jpg',
+      category: 2,
+      tools: ['angular', 'html', 'php', 'css', 'bootstrap', 'mysql'],
+    },
+    {
+      id: 7,
+      title: 'SIGEM - UI/UX',
+      cover:
+        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597354032/portfolio/sigem/cover_iva5vx.jpg',
+      category: 2,
+      tools: ['react', 'html', 'php', 'css', 'bootstrap'],
+    },
+    {
+      id: 8,
+      title: 'Saas Consultores - UI/UX',
+      cover:
+        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597357629/portfolio/saas/cover_qhrryd.jpg',
+      category: 2,
+      tools: ['html', 'php', 'jquery', 'css', 'bootstrap', 'mysql'],
     },
   ],
   img_items: [

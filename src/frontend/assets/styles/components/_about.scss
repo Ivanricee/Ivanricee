@@ -1,0 +1,131 @@
+.main-about {
+  @include main($dark_text_color, $dark_text_color);
+  margin-bottom: 200px;
+  .main__title {
+    margin-top: 15%;
+  }
+  &__container {
+    display: flex;
+  }
+  &__text {
+    max-width: 55%;
+  }
+  &__contact {
+    position: relative;
+    flex-grow: 1;
+    font-family: khand;
+    height: max-content;
+    padding: 1.8%;
+    color: $dark_text_color;
+    font-size: 1.2rem;
+    line-height: 1.8em;
+    margin-left: 10%;
+    text-align: center;
+    border: 1px solid $dark_lines_color;
+    border-radius: 20px/20px;
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      border: 3px solid $clear_lines_color;
+      top: 16px;
+      right: -16px;
+      left: 16px;
+      bottom: -16px;
+      border-radius: 20px/20px;
+    }
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  &__socialm {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      text-align: left;
+      width: 100%;
+      color: $dark_color;
+      cursor: pointer;
+      font-size: 1.05rem;
+      span {
+        display: inline-block;
+        margin: auto;
+        padding: 0 4px;
+        padding-top: 4px;
+        line-height: 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        background-color: $dark_color;
+        color: $clear_color;
+      }
+
+      &:hover {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    p {
+      padding: 0;
+      font-size: 0.8rem;
+      line-height: 1.8rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+// -----------------------MEDIA QUERIES -------------------------
+
+// -----------------------MEDIA QUERIES -------------------------
+//menu fix
+
+//desktop normal
+@include media(desktop) {
+  .main-about {
+    margin-bottom: 150px;
+    &__container {
+      flex-wrap: wrap;
+    }
+    &__text {
+      max-width: 100%;
+    }
+    &__contact {
+      flex-grow: initial;
+      margin: 0 35%;
+    }
+  }
+}
+
+//tablet768
+@include media(mobile-only) {
+  .main-about {
+    margin-top: 90px;
+    &__contact {
+      flex-grow: initial;
+      margin: 0 30%;
+    }
+  }
+}
+
+//mobile600
+@include media(mobile-xs) {
+  .main-about {
+    margin-top: 90px;
+    &__contact {
+      flex-grow: initial;
+      margin: 0 25%;
+    }
+  }
+}
+
+//phones
+@include media(mobile-portrait) {
+  .main-about {
+    margin-bottom: 100px;
+    margin-top: 10px;
+    &__contact {
+      margin: 20px 15%;
+    }
+  }
+}

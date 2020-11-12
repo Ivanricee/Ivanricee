@@ -1,24 +1,52 @@
-@import './bootstrap_reboot.scss';
-@import './Vars.scss';
-@import './breakpoints.scss';
 html {
   height: 100%;
 }
 body {
-  line-height: 1;
+  line-height: 1.5;
   background: $body_background;
   font-size: 16px;
   height: 100%;
+  .main__title {
+    will-change: opacity, transform;
+    animation-name: opacity, translatey;
+    animation-duration: 0.3s, 0.3s;
+    animation-timing-function: linear, cubic-bezier(0, 0.61, 0.42, 0.99);
+    animation-fill-mode: forwards, forwards;
+    position: relative;
+    width: max-content;
+
+    /*&::before {
+      content: '';
+      position: absolute;
+      background-color: rgba($color: #55f9ff, $alpha: 0.3);
+      top: 22px;
+      right: -5vw;
+      left: -0.4em;
+      bottom: 0;
+      z-index: -1;
+    }*/
+    &::after {
+      content: '';
+      animation-direction: reverse, reverse;
+      position: absolute;
+      border-top: 3px solid $dark_lines_color;
+      top: 42px;
+      right: -2.5vw;
+      left: -2vw;
+      bottom: -5px;
+    }
+  }
   & #modal {
-    position: absolute;
+    position: fixed;
     display: flex;
+    overflow-y: scroll;
     background: $background_modal;
     padding: 20px;
     top: 0;
     left: 0;
     right: 0;
     bottom: auto;
-    min-height: 100%;
+    max-height: 100vh;
     z-index: 100;
     flex-wrap: wrap;
     .modal__article-image {
@@ -74,14 +102,17 @@ body {
   }
 }
 
-.container {
+/*.container {
+
+  Este formato ahora sera para el modal de curriculum
   display: grid;
   grid-template: 70px 1fr / minmax(310px, 25%) minmax(475px, 1fr);
   height: 100vh;
   grid-template-areas:
     'left nav'
     'left main';
-}
+
+}*/
 //animacion
 @keyframes entrada {
   0% {
@@ -95,16 +126,19 @@ body {
 }
 
 // media querys
-// reduce min-width
+@include media(desktop) {
+  body {
+    .main__title {
+      &::before {
+        right: -15vw;
+        left: -0.3em;
+      }
+      &::after {
+        right: -5vw;
+        left: -3.5vw;
+      }
+    }
+  }
+}
 @include media(mobile-only) {
-  .container {
-    grid-template: max-content 70px 1fr / 1fr;
-    grid-template-areas:
-      'left'
-      'nav'
-      'main';
-  }
-  .modal__article-image {
-    min-height: 300px;
-  }
 }

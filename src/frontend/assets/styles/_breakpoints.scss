@@ -18,6 +18,10 @@
     @media only screen and (min-width: 1200px) {
       @content;
     }
+  } @else if $breakpoint == desktop-m-max {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
   } @else if $breakpoint == desktop-l {
     @media only screen and (min-width: 1480px) {
       @content;
@@ -28,6 +32,10 @@
     }
   } @else if $breakpoint == mobile-xs {
     @media only screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == mobile-portrait {
+    @media only screen and (max-width: 440px) {
       @content;
     }
   } @else if $breakpoint == mobile-only {

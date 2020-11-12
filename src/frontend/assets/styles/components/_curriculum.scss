@@ -1,0 +1,196 @@
+.main-cv {
+  $self: &;
+  @include main($sec_clear_color, $clear_color);
+
+  padding: 40px 12%;
+  display: grid;
+  background-color: #5d5cd9;
+  grid-template: 80px 250px 1fr / repeat(3, 1fr);
+  grid-template-areas:
+    'title title title'
+    'career career career'
+    'sectiona sectionb sectionc';
+  grid-column-gap: 1em;
+  color: white;
+  .main__title {
+    grid-area: title;
+  }
+
+  a {
+    @include parrafo;
+    display: block;
+    width: max-content;
+    color: $dark_color;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      a {
+        text-decoration: underline;
+        outline: none;
+      }
+    }
+  }
+
+  section {
+    h2 {
+      @include box-title;
+    }
+    p {
+      @include parrafo;
+    }
+    #{$self}__subtitle {
+      color: lighten(#dad4ec, $amount: 7);
+      width: 100%;
+      font-size: 1.4em;
+      margin-top: 1.4em;
+      margin-bottom: 0.9em;
+    }
+    #{$self}__subtitle:nth-of-type(1) {
+      margin-top: 0.5em;
+    }
+    h4 {
+      margin-bottom: 1.1em;
+      margin-top: -1em;
+      color: $dark_color;
+      color: #ffa9d1;
+      font-weight: 600;
+    }
+    small {
+      font-size: 0.7em;
+      position: relative;
+      bottom: 1.5em;
+    }
+    ul {
+      @include parrafo;
+      padding: 0 0.7em 0 1.9em;
+    }
+
+    #{$self}__section__wrapper-span {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      color: lighten(#dad4ec, $amount: 2);
+    }
+    span {
+      font-size: 0.9em;
+      margin: 3px;
+      padding: 3px 6px;
+      background-color: rgba($color: #ffffff, $alpha: 0.1);
+    }
+  }
+  &__section__icon {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    div {
+      margin-top: 10px;
+      svg {
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+      }
+      span {
+        font-size: 0.9em;
+        margin: 3px;
+        padding: 3px 6px;
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+      }
+    }
+  }
+
+  &__section-career {
+    grid-area: career;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 0 20%;
+    padding-bottom: 50px;
+  }
+  &__section-a {
+    grid-area: sectiona;
+  }
+  &__section-b {
+    grid-area: sectionb;
+  }
+  &__section-c {
+    grid-area: sectionc;
+  }
+}
+// -----------------------MEDIA QUERIES -------------------------
+
+//tablet and desktop content
+@media only screen and (max-width: 1244px) {
+  .main-cv {
+    $self: &;
+    grid-template: 80px 250px 1fr 1fr / repeat(2, 1fr);
+    grid-template-areas:
+      'title title'
+      'career career'
+      'sectiona sectionb'
+      'sectionc sectionc ';
+    &__section-c {
+      padding-top: 50px;
+    }
+    #{$self}__section__icon {
+      justify-content: space-evenly;
+      padding: 0 10vw;
+    }
+  }
+}
+
+//mobile xs
+
+@include media(desktop) {
+  .main-cv {
+    grid-template: 80px 250px 1fr 1fr 1fr/ 1fr;
+    grid-template-areas:
+      'title '
+      'career'
+      'sectiona'
+      'sectionb'
+      'sectionc';
+    .main-cv__section-c {
+      margin-top: 5%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .main-cv {
+    &__section-career {
+      padding: 0 10%;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-cv {
+    $self: &;
+    grid-template: 80px 320px 1fr 1fr 1fr/ 1fr;
+    grid-template-areas:
+      'title '
+      'career'
+      'sectiona'
+      'sectionb'
+      'sectionc';
+    &__section-career {
+      padding: 0;
+      padding-bottom: 40px;
+    }
+    #{$self}__section__icon {
+      justify-content: space-evenly;
+      padding: 0;
+      div {
+        svg {
+          width: 45px;
+        }
+        span {
+          font-size: 0.6em;
+        }
+      }
+    }
+  }
+}

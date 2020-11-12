@@ -1,0 +1,113 @@
+$conent-font: 'Titillium Web', sans-serif;
+$nav-font: 'Khand', sans-serif;
+//Variables
+
+$clear_color: rgb(232, 233, 243);
+$sec_clear_color: #7feeee;
+$clear_lines_color: #dec2ee;
+$color_active_link: rgb(212, 239, 246);
+
+$body_background: rgb(232, 233, 243);
+$dark_color: #5d5cd9;
+$dark_lines_color: #4c449a;
+$dark_text_color: #565692;
+
+//-------------- cambiar colores----------------
+$box_title_background: linear-gradient(
+  270deg,
+  rgb(93, 92, 217) 9%,
+  rgba(174, 198, 255, 0.3) 100%
+);
+
+$background_modal: darken(
+  $color: rgba(14, 11, 54, 0.918),
+  $amount: 3,
+);
+$background_contact_card: darken(
+  $color: rgba(14, 11, 54, 0.753),
+  $amount: 3,
+);
+//------------------------------------------------
+//mixin
+
+@mixin header-ratio($property, $fix-ratio) {
+  /*ratio img h/w*wrapper  */
+  #{$property}: calc(555 / 1713 * 100vw - #{$fix-ratio});
+}
+@mixin button {
+  font-family: $nav-font;
+  font-weight: 600;
+  background: rgb(246, 166, 203);
+  background: linear-gradient(0deg, #ecbdd3 0%, #db819a 100%);
+  box-shadow: -4px 5px 4px 0px #663e66;
+  color: rgba(94, 43, 94, 1);
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1rem;
+}
+@mixin main($colorTitle, $colorParagraph) {
+  font-family: 'Titillium Web';
+  padding: 0 16.5%;
+  line-height: 1.5;
+  .main__title {
+    margin-bottom: 30px;
+    font-family: $nav-font;
+    color: $colorTitle;
+    font-size: 1.6rem;
+    line-height: 2em;
+  }
+  p {
+    color: $colorParagraph;
+    font-size: 1rem;
+    padding: 5px 0;
+  }
+}
+@mixin box-title {
+  display: flex;
+  font-size: 1.25em;
+  align-items: center;
+  padding: 7px;
+  height: 40px;
+  background: $box_title_background;
+  border-radius: 4%;
+  color: white;
+  width: 100%;
+}
+@mixin parrafo {
+  margin: 0.1em;
+  line-height: 1.35em;
+  color: #dad4ec;
+  font-size: 1rem;
+}
+
+/// ANIMATION
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes translatey {
+  0% {
+    transform: scale(0.93) translateY(30px) translateX(30px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0) translateX(30px);
+  }
+}
+@keyframes translatex {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-30px);
+  }
+}

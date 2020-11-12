@@ -1,0 +1,120 @@
+.main-header {
+  $self: &;
+  position: relative;
+  width: 100%;
+  height: max-content;
+  background: $dark_color
+    url('https://res.cloudinary.com/ivanrice-c/image/upload/v1599681385/ivanrice/header_z3rj70.png');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: 100% auto;
+  background-position: 0 -5vw;
+
+  @include header-ratio(padding-top, 1vw);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+  color: $clear_color;
+  font-family: Khand;
+  will-change: opacity, transform;
+  &__title {
+    animation-name: opacity, translatey;
+    animation-duration: 0.3s, 0.3s;
+    animation-timing-function: linear, cubic-bezier(0, 0.61, 0.42, 0.99);
+    animation-fill-mode: forwards, forwards;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 70%;
+    left: 23%;
+    height: 70%;
+    top: 0;
+    text-align: center;
+    #{$self}__profession {
+      animation: translatex 0.2s cubic-bezier(0.67, 0.01, 0.63, 0.99) 0.4s;
+      animation-fill-mode: forwards;
+      line-height: 1em;
+      width: 100%;
+      font-weight: bold;
+      font-size: 6.5rem;
+    }
+    #{$self}__name {
+      animation: translatex 0.2s cubic-bezier(0.67, 0.01, 0.63, 0.99) 0.46s;
+      animation-fill-mode: forwards;
+      line-height: 1em;
+      width: 100%;
+      font-weight: 500;
+      font-size: 5.5rem;
+    }
+  }
+}
+// -----------------------MEDIA QUERIES -------------------------
+//menu fix
+@include media(desktop-m-max) {
+  .main-header {
+    $self: &;
+    #{$self}__profession {
+      font-size: 5.5rem;
+    }
+    #{$self}__name {
+      font-size: 4.5rem;
+    }
+  }
+}
+@include media(desktop) {
+  .main-header {
+    $self: &;
+    #{$self}__profession {
+      font-size: 4.2rem;
+    }
+    #{$self}__name {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+//tablet
+@include media(mobile-only) {
+  .main-header {
+    $self: &;
+    &__title {
+      left: 23%;
+      #{$self}__profession {
+        font-size: 3.4rem;
+      }
+      #{$self}__name {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
+
+//phones
+@include media(mobile-portrait) {
+  .main-header {
+    $self: &;
+    &__title {
+      left: 23%;
+      #{$self}__profession {
+        font-size: 1.9rem;
+      }
+      #{$self}__name {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+//// ############### Animation ######
+
+/*.header-title-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.header-title-enter-active {
+  opacity: 0.2;
+  transform: translateX(-2);
+  will-change: opacity, transform;
+  transition: opacity 300ms, transform 300ms;
+}*/

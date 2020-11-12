@@ -22,6 +22,7 @@ const ItemImage = ({ src, alt, id }) => {
       })
 
       observer.observe(imgItemElementRef.current)
+      return () => observe.disconnect()
     })
   })
 

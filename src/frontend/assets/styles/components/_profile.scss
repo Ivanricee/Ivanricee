@@ -1,0 +1,12 @@
+.main-profile {
+  position: absolute;
+  right: 0;
+  @include header-ratio(top, 22.9vw);
+  left: 16%;
+  img {
+    position: absolute;
+    top: 11vw;
+    left: 5.2vw;
+    width: 18%;
+  }
+}

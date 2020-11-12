@@ -1,16 +1,29 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { AiOutlineCloseSquare } from 'react-icons/ai'
+import { useHistory } from 'react-router-dom'
 import ItemImage from './ItemImage'
-import { setModalOpen } from '../../actions'
+import { setModalOpen, setHashMenu } from '../../actions'
 
-const ModalItem = ({ idPortfolioList, title, imgItems, setModalOpen, modal }) => {
-  //const history = useHistory()
+const ModalItem = ({
+  portfolioItem,
+  title,
+  imgItems,
+  portfolio,
+  setModalOpen,
+  setHashMenu,
+}) => {
+  const history = useHistory()
+
+  const portfolioCategory = portfolio == null ? 1 : Number(portfolio.charAt(0))
   const portFolioItems = imgItems.filter(
-    (item) => item.idPortfolioList === Number(idPortfolioList)
+    (item) => item.idPortfolioList === portfolioItem
   )
   const handleModalItem = () => {
-    return setModalOpen(false)
+    document.body.style.overflow = 'visible'
+    history.push(`/portfolio/${portfolioCategory}0`)
+    setModalOpen(false)
+    //setHashMenu(2)
   }
   return (
     <>
@@ -34,5 +47,5 @@ const mapStateToProps = (state) => {
     imgItems: state.img_items,
   }
 }
-const mapDispatchToProps = { setModalOpen }
+const mapDispatchToProps = { setModalOpen, setHashMenu }
 export default connect(mapStateToProps, mapDispatchToProps)(ModalItem)

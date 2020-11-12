@@ -64,45 +64,24 @@ const setResponse = (html, preloadedState, manifest) => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
-        body{
-          background-color: blue;
+        .main-header {
+          padding-top: calc(555 / 1713 * 100vw - 1vw);
         }
-        .main-portfolio__item{
-          width: 264.5px;
-          min-height: 211px;
-          position: relative;
-          background-color: red;
-        }
-
-        .main-aside__background {
-          min-height: 394px;
-        }
-        .main-aside__background img {
-          width: 100%;
-        }
-        @media only screen and (max-width: 768px) {
-          .main-aside__background {
-            min-height: 324px;
-          }
-        }
-        @media only screen and (max-width: 600px) {
-          @content;
-          .main-aside__background {
-            min-height: 172px;
-          }
+        .main-about {
+          max-height:795px;
         }
         </style>
         <title>Ivanrice</title>
       </head>
       <body>
-        <div id="app">${html}</div>
+        <main id="main">${html}</main>
         <script>
         window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(
           /</g,
           '\\u003c'
         )}
         </script>
-        <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
         <link  rel="stylesheet" type="text/css" href="${mainStyles}">
         <script src="${mainBuild}" type="text/javascript"></script>
@@ -110,13 +89,49 @@ const setResponse = (html, preloadedState, manifest) => {
       </body>
     </html>`
 }
+const PORTFOLIO = '/portfolio/'
 const renderApp = async (req, res) => {
+  console.log('------------ server  req: ----------------')
+  console.log(req.url)
+
   let initialState
+  let menu
+  let portfolioMenu
+  switch (req.url) {
+    case '/':
+      menu = 0
+      break
+    case '/about':
+      menu = 1
+      break
+    case '/portfolio/10':
+      portfolioMenu = 1
+      menu = 2
+      break
+    case '/portfolio/20':
+      portfolioMenu = 2
+      menu = 2
+      break
+    case '/reel':
+      menu = 3
+      break
+    case '/cv':
+      menu = 4
+      break
+    default:
+      menu = 0
+      break
+  }
+
+  if (req.url.slice(0, PORTFOLIO.length) === PORTFOLIO) {
+    portfolioMenu = req.url.slice(PORTFOLIO.length, PORTFOLIO.length + 1)
+    menu = 2
+  }
   try {
     const projects = await Promise.resolve(projectsDb)
-    //res.status(200).json(projects)
     initialState = {
-      menu: 'frontend',
+      menu,
+      portfolioMenu: Number(portfolioMenu),
       modal: false,
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:good/v1596741394/introduce.png',
@@ -125,7 +140,8 @@ const renderApp = async (req, res) => {
     }
   } catch (err) {
     initialState = {
-      menu: 'frontend',
+      menu,
+      portfolioMenu: Number(portfolioMenu),
       modal: false,
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:good/v1596741394/introduce.png',
@@ -136,15 +152,28 @@ const renderApp = async (req, res) => {
   }
   const store = createStore(reducer, initialState)
   const preloadedState = store.getState()
+  // This context object contains the results of the render
+  const context = {}
   const html = renderToString(
     <Provider store={store}>
-      <StaticRouter location={req.url} context={{}}>
+      <StaticRouter location={req.url} context={context}>
         <Layout>{renderRoutes(serverRoutes)}</Layout>
       </StaticRouter>
     </Provider>
   )
 
-  res.send(setResponse(html, preloadedState, req.hashManifest))
+  // context.url will contain the URL to redirect to if a <Redirect> was used
+  console.log('context: ', context)
+  if (context.url) {
+    /*res.writeHead(302, {
+      Location: context.url,
+    })*/
+    res.redirect(301, context.url)
+    res.end()
+  } else {
+    res.send(setResponse(html, preloadedState, req.hashManifest))
+    //res.end();
+  }
 }
 //Ruta para servir el json de los proyectos
 //app.get('/projects', async function (req, res) {})

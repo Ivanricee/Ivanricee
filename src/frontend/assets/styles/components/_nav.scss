@@ -1,0 +1,67 @@
+.main-nav {
+  position: absolute;
+  z-index: 2;
+  @include header-ratio(top, 7vw);
+  left: 60vw;
+  width: 36%;
+  font-family: $nav-font;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: $dark_color;
+  transition: left 0.1s;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    li {
+      padding: 0 10px;
+      & .link {
+        color: $dark_color;
+        text-decoration: none;
+      }
+      & .active {
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 4px solid $dark_lines_color;
+      }
+    }
+  }
+}
+// -----------------------MEDIA QUERIES -------------------------
+//menu fix
+@include media(desktop) {
+  .main-nav {
+    @include header-ratio(top, 4vw);
+    left: 55vw;
+  }
+}
+
+//tablet
+@include media(mobile-only) {
+  .main-nav {
+    font-size: 0.8rem;
+    ul {
+      li {
+        padding: 0 7px;
+      }
+    }
+  }
+}
+
+//phones
+@include media(mobile-portrait) {
+  .main-nav {
+    position: initial;
+    font-size: 1rem;
+    left: 0;
+    width: 100%;
+    margin: 35px auto;
+    ul {
+      padding: 0;
+      li {
+        padding: 0 11px;
+      }
+    }
+  }
+}

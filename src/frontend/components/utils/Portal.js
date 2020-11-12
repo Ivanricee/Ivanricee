@@ -25,8 +25,7 @@ const Portal = ({ id, children }) => {
       }
     }
   }, [])
-  /*const childofelement = document.querySelector('#modal')
-  if (childofelement !== null) childofelement.removeChild()*/
+
   //agregamos el modal al nuevo div
   return createPortal(children, modalElement.current)
 }

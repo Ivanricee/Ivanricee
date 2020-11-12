@@ -1,23 +1,32 @@
-import Curriculum from '../containers/Curriculum'
-import Portfolio from '../containers/Portfolio'
-import Reel from '../containers/Reel'
+import Home from '../containers/Home'
 import NotFound from '../containers/NotFound'
 
 const routes = [
   {
     exact: true,
     path: '/',
-    component: Curriculum,
+    component: Home,
+  },
+
+  {
+    exact: true,
+    path: '/about',
+    component: Home,
   },
   {
     exact: true,
-    path: '/portfolio/:categoria/:id?',
-    component: Portfolio,
+    path: '/portfolio/:portfolio?',
+    component: Home,
   },
   {
     exact: true,
     path: '/reel',
-    component: Reel,
+    component: Home,
+  },
+  {
+    exact: true,
+    path: '/cv',
+    component: Home,
   },
   {
     name: 'NotFound',
