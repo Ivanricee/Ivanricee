@@ -38,7 +38,9 @@ const Portfolio = (props) => {
   }
   return (
     <>
-      <h1 className="main__title">PORTFOLIO</h1>
+      <div className="main__title">
+        <h1>PORTFOLIO</h1>
+      </div>
       <nav className="main-portfolio__nav">
         <ul>
           <li>

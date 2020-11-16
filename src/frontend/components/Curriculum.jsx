@@ -6,7 +6,9 @@ import Icon from './icon/Icon'
 const Curriculum = (props) => {
   return (
     <>
-      <h1 className="main__title">CURRICULUM</h1>
+      <div className="main__title">
+        <h1>CURRICULUM</h1>
+      </div>
       <section className="main-cv__section-career">
         <div>
           <h2>CAREER OBJETIVE</h2>

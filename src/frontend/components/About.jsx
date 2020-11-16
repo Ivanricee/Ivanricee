@@ -6,7 +6,9 @@ import { GoLocation } from 'react-icons/go'
 const About = () => {
   return (
     <>
-      <h1 className="main__title">ABOUT</h1>
+      <div className="main__title">
+        <h1>ABOUT</h1>
+      </div>
       <div className="main-about__container">
         <div className="main__text">
           <p>

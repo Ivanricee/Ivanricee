@@ -1,0 +1,41 @@
+/// ANIMATION
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes translatey {
+  0% {
+    transform: scale(0.93) translateY(30px) translateX(30px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0) translateX(30px);
+  }
+}
+@keyframes translatex {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-30px);
+  }
+}
+@keyframes rebote {
+  from {
+    opacity: 0;
+    transform: translateY(-60px) scale(1.01, 0.99);
+  }
+  50% {
+    transform: scale(1.04, 0.96);
+  }
+
+  to {
+    transform: translateY(0) scale(1, 1);
+  }
+}

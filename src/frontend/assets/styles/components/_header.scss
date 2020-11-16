@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: 100% auto;
-  background-position: 0 -5vw;
+  background-position: 0 -6.6vw;
 
   @include header-ratio(padding-top, 1vw);
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);

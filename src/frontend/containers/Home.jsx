@@ -39,7 +39,16 @@ const Home = ({
       setPortfolioParamAfterOpenModalbyUrl(true)
     }
   }, [menu, modal])
+useEffect(()=>{
+  window.addEventListener('scroll', (e)=>{
+    if (window.scrollY <= 500) {
+      elementRef.current[0].style.backgroundPosition = `0 ${-6.6 + window.scrollY / 30}vw`
+      console.log('count ', window.scrollY)
+    }
 
+  })
+  return () => window.removeEventListener('scroll')
+}, [])
   return (
     <>
       {locationMenu.pathname !== `/portfolio/${portfolioMenu}0` &&

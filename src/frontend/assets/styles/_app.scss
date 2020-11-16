@@ -7,24 +7,19 @@ body {
   font-size: 16px;
   height: 100%;
   .main__title {
-    will-change: opacity, transform;
-    animation-name: opacity, translatey;
-    animation-duration: 0.3s, 0.3s;
-    animation-timing-function: linear, cubic-bezier(0, 0.61, 0.42, 0.99);
-    animation-fill-mode: forwards, forwards;
     position: relative;
-    width: max-content;
-
+    max-width: max-content;
+    overflow: hidden;
     /*&::before {
-      content: '';
-      position: absolute;
-      background-color: rgba($color: #55f9ff, $alpha: 0.3);
-      top: 22px;
-      right: -5vw;
-      left: -0.4em;
-      bottom: 0;
-      z-index: -1;
-    }*/
+        content: '';
+        position: absolute;
+        background-color: rgba($color: #55f9ff, $alpha: 0.3);
+        top: 22px;
+        right: -5vw;
+        left: -0.4em;
+        bottom: 0;
+        z-index: -1;
+      }*/
     &::after {
       content: '';
       animation-direction: reverse, reverse;
@@ -34,6 +29,15 @@ body {
       right: -2.5vw;
       left: -2vw;
       bottom: -5px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      padding: 0 60px 0 10px;
+      will-change: opacity, transform;
+      animation-name: opacity, translatey;
+      animation-duration: 0.3s, 0.3s;
+      animation-timing-function: linear, cubic-bezier(0, 0.61, 0.42, 0.99);
+      animation-fill-mode: forwards, forwards;
     }
   }
   & #modal {

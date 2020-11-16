@@ -3,10 +3,12 @@
   right: 0;
   @include header-ratio(top, 22.9vw);
   left: 16%;
-  img {
+  &__prof-img {
     position: absolute;
     top: 11vw;
     left: 5.2vw;
     width: 18%;
+    transform-origin: 50% 100%;
+    animation: rebote 0.45s cubic-bezier(0.38, 1.76, 0.74, 0.98);
   }
 }
