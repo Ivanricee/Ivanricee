@@ -7,7 +7,6 @@ const PortfolioList = ({
   portfolioItem,
   portfolioCategory,
   portfolioList,
-  portfolio,
 }) => {
   const portfolioListOfItems = portfolioList.filter(
     (portfolioListItem) => portfolioListItem.category === portfolioCategory
@@ -21,7 +20,6 @@ const PortfolioList = ({
             portfolioCategory={portfolioCategory}
             key={portfolioListItem.id}
             portfolioItem={portfolioItem}
-            portfolio={portfolio}
           />
         )) :
        <div className="main-portfolio__nodata"><h2>Selecciona frontend o 3D para ver el portafolio.</h2></div>}

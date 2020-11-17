@@ -92,7 +92,6 @@ const PortfolioItem = ({
             title={title}
             key={id}
             categoria={portfolioCategory}
-            portfolio={portfolio}
           />
         </Portal>
       )}

@@ -3,13 +3,11 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PortfolioList from './PortfolioList'
-import { setModalOpen, setHashMenu, setPortfolioMenu } from '../../actions'
+import { setModalOpen, setPortfolioMenu } from '../../actions'
 
 const Portfolio = (props) => {
-  //const [portfolioLocalMenu, setPortfolioLocalMenu] = useState(props.menu)
-  //10 => (1 = frontend | 0 = sin item por abrir en modal)
+  //10/20 => (1/2 = frontend/3D | 0 = sin item por abrir en modal)
   //const portfolioCategory =
-  //  props.portfolio == null ? 1 : Number(props.portfolio.charAt(0))
   //par abrirlo directamente en el modal desde la ruta.
   const portfolioItem =
     props.portfolio == null ? 0 : Number(props.portfolio.slice(1))
@@ -18,9 +16,7 @@ const Portfolio = (props) => {
     const onKeyDown = (e) => {
       if (e.keyCode === 27) {
         document.body.style.overflow = 'visible'
-
         props.setModalOpen(false)
-        //history.push(`/portfolio/${portfolioCategory}0`)
       }
     }
     if (props.modal) {
@@ -34,10 +30,10 @@ const Portfolio = (props) => {
   }, [props.modal === true])
   const handlePushPortfolioCategory = (category) => {
     props.setPortfolioMenu(category)
-    //history.push(`/portfolio/${category}`)
   }
   return (
     <>
+      {console.log('Menu per deffect', props.portfolioMenu)}
       <div className="main__title">
         <h1>PORTFOLIO</h1>
       </div>
@@ -66,9 +62,8 @@ const Portfolio = (props) => {
       </nav>
       <section className="main-portfolio__list">
         <PortfolioList
-          portfolioCategory={Number(props.portfolioMenu)}
+          portfolioCategory={props.portfolioMenu || 1}
           portfolioItem={portfolioItem}
-          portfolio={props.portfolio}
         />
       </section>
     </>
@@ -80,7 +75,6 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = {
   setModalOpen,
-  setHashMenu,
   setPortfolioMenu,
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Portfolio)
