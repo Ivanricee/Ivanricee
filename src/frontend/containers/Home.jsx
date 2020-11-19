@@ -4,6 +4,7 @@
 import React, { useEffect, useState } from 'react'
 import { Redirect, useLocation, useParams } from 'react-router'
 import { connect } from 'react-redux'
+
 import Header from '../components/Header'
 import Nav from '../components/Nav'
 import About from '../components/About'
@@ -46,12 +47,13 @@ useEffect(()=>{
     if (window.scrollY <= 500) {
       elementRef.current[0].style.backgroundPosition = `0 ${-6.6 + window.scrollY / 30}vw`
     }
-
   })
   return () => window.removeEventListener('scroll')
 }, [])
+
   return (
     <>
+
       {locationMenu.pathname !== `/portfolio/${portfolioMenu}0` &&
         menuScrollObserved === true &&
         modal === false && <Redirect to={`/portfolio/${portfolioMenu}0`} />}

@@ -105,8 +105,8 @@
     display: flex;
     align-items: center;
     height: auto;
-    padding: 0 20%;
-    padding-bottom: 50px;
+    padding: 0 20% 50px 20%;
+    //padding-bottom: 50px;
   }
   &__section-a {
     grid-area: sectiona;
@@ -169,7 +169,7 @@
 @media only screen and (max-width: 600px) {
   .main-cv {
     $self: &;
-    grid-template: 80px 320px 1fr 1fr 1fr/ 1fr;
+    grid-template: 80px 320px 1fr 1fr 1fr/ 72vw;
     grid-template-areas:
       'title '
       'career'

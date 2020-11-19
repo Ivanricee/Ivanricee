@@ -33,7 +33,7 @@ const Portfolio = (props) => {
   }
   return (
     <>
-      {console.log('Menu per deffect', props.portfolioMenu)}
+      {console.log('Menu per deffect', !props.portfolioMenu)}
       <div className="main__title">
         <h1>PORTFOLIO</h1>
       </div>
@@ -43,7 +43,9 @@ const Portfolio = (props) => {
             <Link
               to="/portfolio/10"
               onClick={() => handlePushPortfolioCategory(1)}
-              className={`link ${props.portfolioMenu === 1 && 'active'}`}
+              className={`link ${props.portfolioMenu === 1 ? 'active' : ''} ${
+                !props.portfolioMenu ? 'active' : ''
+              }`}
             >
               Frontend
             </Link>
@@ -53,7 +55,7 @@ const Portfolio = (props) => {
             <Link
               to="/portfolio/20"
               onClick={() => handlePushPortfolioCategory(2)}
-              className={`link ${props.portfolioMenu === 2 && 'active'}`}
+              className={`link ${props.portfolioMenu === 2 ? 'active' : ''}`}
             >
               3D
             </Link>
