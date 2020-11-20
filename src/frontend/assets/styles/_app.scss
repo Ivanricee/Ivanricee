@@ -23,40 +23,6 @@ body {
     }
   }
 
-  .main__title {
-    position: relative;
-    max-width: max-content;
-    overflow: hidden;
-    /*&::before {
-        content: '';
-        position: absolute;
-        background-color: rgba($color: #55f9ff, $alpha: 0.3);
-        top: 22px;
-        right: -5vw;
-        left: -0.4em;
-        bottom: 0;
-        z-index: -1;
-      }*/
-    &::after {
-      content: '';
-      animation-direction: reverse, reverse;
-      position: absolute;
-      border-top: 3px solid $dark_lines_color;
-      top: 42px;
-      right: -2.5vw;
-      left: -2vw;
-      bottom: -5px;
-    }
-    h1 {
-      font-size: 1.6rem;
-      padding: 0 60px 0 10px;
-      will-change: opacity, transform;
-      animation-name: opacity, translatey;
-      animation-duration: 0.3s, 0.3s;
-      animation-timing-function: linear, cubic-bezier(0, 0.61, 0.42, 0.99);
-      animation-fill-mode: forwards, forwards;
-    }
-  }
   & #modal {
     position: fixed;
     display: flex;
@@ -66,7 +32,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    bottom: auto;
+    bottom: 0;
     max-height: 100vh;
     z-index: 100;
     flex-wrap: wrap;
@@ -85,13 +51,14 @@ body {
     }
     & .modal__title {
       @include box_title;
+      margin-bottom: 3%;
     }
     & .modal__icon {
       position: absolute;
       color: white;
       font-size: 2em;
       right: 25px;
-      top: 25px;
+
       cursor: pointer;
     }
     & .modal__btn--cerrar {

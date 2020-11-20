@@ -1,6 +1,6 @@
 .main-portfolio {
   $self: &;
-  @include main($sec_clear_color, $clear_color);
+  @include main($body_background, $clear_color);
   padding-top: 85px;
   padding-bottom: 85px;
   background-color: #5d5cd9;
@@ -27,7 +27,7 @@
     width: max-content;
     box-sizing: border-box;
     margin: 0 auto;
-    color: $sec_clear_color;
+    color: $menu_sec_clear_color;
     height: 49px;
     ul {
       font-size: 1.4rem;
@@ -41,7 +41,7 @@
       li {
         padding: 0 10px;
         & .link {
-          color: $sec_clear_color;
+          color: $menu_sec_clear_color;
           text-decoration: none;
           &:hover {
             font-weight: 500;

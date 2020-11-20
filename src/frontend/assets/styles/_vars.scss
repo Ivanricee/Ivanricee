@@ -3,7 +3,7 @@ $nav-font: 'Khand', sans-serif;
 //Variables
 
 $clear_color: rgb(232, 233, 243);
-$sec_clear_color: #7feeee;
+$menu_sec_clear_color: #7feeee;
 $clear_lines_color: #dec2ee;
 $color_active_link: rgb(212, 239, 246);
 
@@ -19,10 +19,7 @@ $box_title_background: linear-gradient(
   rgba(174, 198, 255, 0.3) 100%
 );
 
-$background_modal: darken(
-  $color: rgba(14, 11, 54, 0.918),
-  $amount: 3,
-);
+$background_modal: darken(#5d5cd9, 3%);
 $background_contact_card: darken(
   $color: rgba(14, 11, 54, 0.753),
   $amount: 3,
@@ -58,6 +55,43 @@ $background_contact_card: darken(
     color: $colorTitle;
     font-size: 1.6rem;
     line-height: 2em;
+    position: relative;
+    width: max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    overflow: hidden;
+    /*&::before {
+        content: '';
+        position: absolute;
+        background-color: rgba($color: #55f9ff, $alpha: 0.3);
+        top: 22px;
+        right: -5vw;
+        left: -0.4em;
+        bottom: 0;
+        z-index: -1;
+      }*/
+    &::after {
+      content: '';
+      animation-direction: reverse, reverse;
+      position: absolute;
+      border-top: 3px solid $colorTitle;
+      opacity: 0.5;
+      -webkit-opacity: 0.5;
+      -moz-opacity: 0.5;
+      top: 42px;
+      right: -2.5vw;
+      left: -2vw;
+      bottom: -5px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      padding: 0 60px 0 10px;
+      will-change: opacity, transform;
+      animation-name: opacity, translatey;
+      animation-duration: 0.3s, 0.3s;
+      animation-timing-function: linear, cubic-bezier(0, 0.61, 0.42, 0.99);
+      animation-fill-mode: forwards, forwards;
+    }
   }
   p {
     color: $colorParagraph;

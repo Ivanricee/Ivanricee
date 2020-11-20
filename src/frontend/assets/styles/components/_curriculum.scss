@@ -1,6 +1,6 @@
 .main-cv {
   $self: &;
-  @include main($sec_clear_color, $clear_color);
+  @include main($body_background, $clear_color);
 
   padding: 40px 12%;
   display: grid;
