@@ -2,14 +2,14 @@ $conent-font: 'Titillium Web', sans-serif;
 $nav-font: 'Khand', sans-serif;
 //Variables
 
-$clear_color: rgb(232, 233, 243);
+$clear_color: #eaefff;
 $menu_sec_clear_color: #7feeee;
 $clear_lines_color: #dec2ee;
 $color_active_link: rgb(212, 239, 246);
 
 $body_background: rgb(232, 233, 243);
 $dark_color: #5d5cd9;
-$dark_lines_color: #4c449a;
+$dark_lines_color: #6d8cfe;
 $dark_text_color: #565692;
 
 //-------------- cambiar colores----------------
@@ -34,10 +34,9 @@ $background_contact_card: darken(
 @mixin button {
   font-family: $nav-font;
   font-weight: 600;
-  background: rgb(246, 166, 203);
-  background: linear-gradient(0deg, #ecbdd3 0%, #db819a 100%);
-  box-shadow: -4px 5px 4px 0px #663e66;
-  color: rgba(94, 43, 94, 1);
+  background: #3f3e9d;
+  background: linear-gradient(0deg, #373788 0%, #3f3e9d 100%);
+  color: #bab9db;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
@@ -115,4 +114,12 @@ $background_contact_card: darken(
   line-height: 1.35em;
   color: #dad4ec;
   font-size: 1rem;
+}
+// media
+@media only screen and (max-width: 700px) {
+  .main__title {
+    h1 {
+      font-size: 1rem;
+    }
+  }
 }

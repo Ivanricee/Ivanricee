@@ -1,6 +1,6 @@
 .main-cv {
   $self: &;
-  @include main($body_background, $clear_color);
+  @include main(#bbcaff, $clear_color);
 
   padding: 40px 12%;
   display: grid;
@@ -176,6 +176,12 @@
       'sectiona'
       'sectionb'
       'sectionc';
+    .main__title {
+      h1 {
+        font-size: 1.2rem;
+        padding-bottom: 15px;
+      }
+    }
     &__section-career {
       padding: 0;
       padding-bottom: 40px;
@@ -192,5 +198,18 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .main-cv {
+    $self: &;
+    grid-template: 100px 320px 1fr 1fr 1fr/ 72vw;
+    grid-template-areas:
+      'title '
+      'career'
+      'sectiona'
+      'sectionb'
+      'sectionc';
   }
 }

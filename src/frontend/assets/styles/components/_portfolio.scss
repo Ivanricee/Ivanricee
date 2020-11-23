@@ -1,6 +1,6 @@
 .main-portfolio {
   $self: &;
-  @include main($body_background, $clear_color);
+  @include main(#bbcaff, $clear_color);
   padding-top: 85px;
   padding-bottom: 85px;
   background-color: #5d5cd9;
@@ -18,11 +18,7 @@
     font-family: $nav-font;
     font-weight: 400;
     border-radius: 6px;
-    background: linear-gradient(
-      270deg,
-      rgb(93, 92, 217) -10%,
-      rgba(174, 198, 255, 0.3) 60%
-    );
+
     // box-shadow: 6px 6px 11px #4f4eb8, -6px -6px 11px #6b6afa;
     width: max-content;
     box-sizing: border-box;
@@ -39,10 +35,11 @@
       margin: 0 90px;
       letter-spacing: 1px;
       li {
-        padding: 0 10px;
+        padding: 0 2.5px;
         & .link {
           color: $menu_sec_clear_color;
           text-decoration: none;
+          padding: 5px 25px;
           &:hover {
             font-weight: 500;
           }
@@ -50,7 +47,13 @@
         & .active {
           font-weight: 500;
           text-decoration: none;
-          border-bottom: 3px solid aquamarine;
+          // border-bottom: 3px solid aquamarine;
+          background: linear-gradient(
+            180deg,
+            rgb(93, 92, 217) -10%,
+            rgba(174, 198, 255, 0.3) 60%
+          );
+          border-radius: 5px;
         }
       }
     }
@@ -155,6 +158,11 @@
     clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 97%);
     &__list {
       width: 212px;
+    }
+    .main__title {
+      h1 {
+        font-size: 1.2rem;
+      }
     }
   }
 }

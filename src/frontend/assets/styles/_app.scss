@@ -1,7 +1,12 @@
 html {
   height: 100%;
+  width: 100%;
 }
 body {
+  width: 100%;
+  #main {
+    width: 100%;
+  }
   line-height: 1.5;
   background: $body_background;
   font-size: 16px;
@@ -19,7 +24,7 @@ body {
       display: initial;
       animation: opacity 1s cubic-bezier(0, 0.61, 0.42, 0.99);
 
-      color: darken(#ffa9d1, 5%);
+      color: lighten(#6d8cfe, 5%);
     }
   }
 

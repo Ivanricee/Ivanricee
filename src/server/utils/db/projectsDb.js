@@ -44,27 +44,43 @@ const projectsDb = {
     },
     {
       id: 6,
-      title: 'Registro UNAM - UI/UX',
+      title: 'Midnight gospel - Fan art',
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597354705/portfolio/register/cover_jjaqkq.jpg',
+        'https://cdna.artstation.com/p/assets/images/images/030/401/790/smaller_square/ivan-bautista-clancy-w.jpg',
       category: 2,
-      tools: ['angular', 'html', 'php', 'css', 'bootstrap', 'mysql'],
+      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
     },
     {
       id: 7,
-      title: 'SIGEM - UI/UX',
+      title: 'Still life',
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597354032/portfolio/sigem/cover_iva5vx.jpg',
+        'https://cdna.artstation.com/p/assets/images/images/018/363/916/smaller_square/ivan-bautista-vasijas-final.jpg',
       category: 2,
-      tools: ['react', 'html', 'php', 'css', 'bootstrap'],
+      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
     },
     {
       id: 8,
-      title: 'Saas Consultores - UI/UX',
+      title: 'Kid mostro - challenge',
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597357629/portfolio/saas/cover_qhrryd.jpg',
+        'https://cdnb.artstation.com/p/assets/images/images/018/831/139/smaller_square/ivan-bautista-kidmostro-camera1.jpg',
       category: 2,
-      tools: ['html', 'php', 'jquery', 'css', 'bootstrap', 'mysql'],
+      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
+    },
+    {
+      id: 9,
+      title: 'GRIM - Fan art',
+      cover:
+        'https://cdnb.artstation.com/p/assets/images/images/018/378/367/smaller_square/ivan-bautista-huesos-final-smoke.jpg',
+      category: 2,
+      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
+    },
+    {
+      id: 10,
+      title: 'Reinhardt - Fan art',
+      cover:
+        'https://cdnb.artstation.com/p/assets/images/images/018/364/081/smaller_square/ivan-bautista-final-rein.jpg',
+      category: 2,
+      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
     },
   ],
   img_items: [
@@ -360,6 +376,14 @@ const projectsDb = {
       id: 7,
       idPortfolioList: 5,
       src: `https://res.cloudinary.com/ivanrice-c/image/upload${PHOTO_EDIT}/v1598668633/portfolio/model/ivan-bautista-wip2_lwvysw.jpg`,
+      alt: '',
+    },
+    {
+      id: 1,
+      idPortfolioList: 1,
+      src:
+        'https://cdna.artstation.com/p/assets/images/images/018/363/916/large/ivan-bautista-vasijas-final.jpg',
+
       alt: '',
     },
   ],

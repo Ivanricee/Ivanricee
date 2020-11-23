@@ -94,7 +94,9 @@
   .main-header {
     $self: &;
     &__title {
-      left: 23%;
+      left: 20%;
+      width: 65;
+      max-width: 70%;
       #{$self}__profession {
         font-size: 1.9rem;
       }
