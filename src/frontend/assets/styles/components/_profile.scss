@@ -4,6 +4,7 @@
   @include header-ratio(top, 22.9vw);
   left: 16%;
   &__prof-img {
+    will-change: opacity, transform;
     position: absolute;
     top: 11vw;
     left: 5.2vw;

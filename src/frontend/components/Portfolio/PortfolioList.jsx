@@ -14,11 +14,12 @@ const PortfolioList = ({
   return (
     <>
       {portfolioListOfItems.length > 0 ?
-        portfolioListOfItems.map((portfolioListItem) => (
+        portfolioListOfItems.map((portfolioListItem, index) => (
           <PortfolioItem
             {...portfolioListItem}
             portfolioCategory={portfolioCategory}
             key={portfolioListItem.id}
+            animationInc={index}
             portfolioItem={portfolioItem}
           />
         )) :

@@ -20,11 +20,16 @@ body {
     top: 62vh;
     display: none;
     cursor: pointer;
+    transition: 0.1s;
     &--show {
+      will-change: opacity;
       display: initial;
       animation: opacity 1s cubic-bezier(0, 0.61, 0.42, 0.99);
 
       color: lighten(#6d8cfe, 5%);
+    }
+    &:hover {
+      transform: scale(1.1, 1.1);
     }
   }
 
@@ -151,6 +156,10 @@ body {
     .main-arrowup {
       font-size: 4rem;
       right: 1.2vw;
+      transition: unset;
+      &:hover {
+        transform: unset;
+      }
     }
   }
 }

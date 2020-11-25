@@ -4,7 +4,7 @@
   width: 100%;
   height: max-content;
   background: $dark_color
-    url('https://res.cloudinary.com/ivanrice-c/image/upload/v1599681385/ivanrice/header_z3rj70.png');
+    url('https://res.cloudinary.com/ivanrice-c/image/upload/v1606174654/ivanrice/header_new_sqohtz.png');
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: 100% auto;
@@ -14,8 +14,8 @@
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
   color: $clear_color;
   font-family: Khand;
-  will-change: opacity, transform;
   &__title {
+    will-change: opacity, transform;
     animation-name: opacity, translatey;
     animation-duration: 0.3s, 0.3s;
     animation-timing-function: linear, cubic-bezier(0, 0.61, 0.42, 0.99);

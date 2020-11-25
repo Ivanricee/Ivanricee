@@ -17,6 +17,7 @@ const PortfolioItem = ({
   title,
   cover,
   tools,
+  animationInc,
   portfolioCategory,
   modal,
   setModalOpen,
@@ -27,6 +28,7 @@ const PortfolioItem = ({
     setModalOpen(true)
   }
 
+  const itemAnimationDelayStyle = animationInc * 0.1
   useEffect(() => {
     //cuando entre desde la ruta y coincida con un item se abre el modal
 
@@ -38,13 +40,11 @@ const PortfolioItem = ({
 
   const URL = `/portfolio/${portfolioCategory}${id}`
   return (
-    <>
-      <NavLink
-        exact
-        to={URL}
-        className="main-portfolio__item"
-        onClick={handleModalItem}
-      >
+    <div
+      className="main-portfolio__item"
+      style={{ animationDelay: `${itemAnimationDelayStyle}s` }}
+    >
+      <NavLink exact to={URL} sty onClick={handleModalItem}>
         <div>
           <div className="main-portfolio__tools">
             {tools.map((tool) => {
@@ -95,7 +95,7 @@ const PortfolioItem = ({
           />
         </Portal>
       )}
-    </>
+    </div>
   )
 }
 
