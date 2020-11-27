@@ -4,7 +4,8 @@ const projectsDb = {
   portfolioList: [
     {
       id: 1,
-      title: 'UI/UX & Frontend',
+      title: 'SCORM COURSES',
+      description: 'UI/UX & Frontend development',
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597355406/portfolio/uiux_courses/cover_tvtvpb.jpg',
       category: 1,
@@ -12,7 +13,8 @@ const projectsDb = {
     },
     {
       id: 2,
-      title: 'Registro UNAM - UI/UX',
+      title: 'FILE MANAGER',
+      description: 'Php - Angular fullstack development',
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597354705/portfolio/register/cover_jjaqkq.jpg',
       category: 1,
@@ -20,7 +22,8 @@ const projectsDb = {
     },
     {
       id: 3,
-      title: 'SIGEM - UI/UX',
+      title: 'SCHOOL MANAGER',
+      description: 'React - php fullstack development',
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597354032/portfolio/sigem/cover_iva5vx.jpg',
       category: 1,
@@ -28,7 +31,8 @@ const projectsDb = {
     },
     {
       id: 4,
-      title: 'Saas Consultores - UI/UX',
+      title: 'VEHICLE INSURANCE',
+      description: 'Webservice - lamp fullstack development',
       cover:
         'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:eco/v1597357629/portfolio/saas/cover_qhrryd.jpg',
       category: 1,
@@ -36,7 +40,8 @@ const projectsDb = {
     },
     {
       id: 5,
-      title: 'Steam punk - space ship',
+      title: 'SPACE SHIP',
+      description: 'A steampunk style & material practice',
       cover:
         'https://cdnb.artstation.com/p/assets/images/images/027/424/717/20200607002852/smaller_square/ivan-bautista-nave-final.jpg?1591507733',
       category: 2,
@@ -44,7 +49,8 @@ const projectsDb = {
     },
     {
       id: 6,
-      title: 'Midnight gospel - Fan art',
+      title: 'CLANCY',
+      description: 'Clancy fan art from The midnight gospel',
       cover:
         'https://cdna.artstation.com/p/assets/images/images/030/401/790/smaller_square/ivan-bautista-clancy-w.jpg',
       category: 2,
@@ -52,7 +58,8 @@ const projectsDb = {
     },
     {
       id: 7,
-      title: 'Still life',
+      title: 'STILL LIFE',
+      description: 'A practice of lighting and materials',
       cover:
         'https://cdna.artstation.com/p/assets/images/images/018/363/916/smaller_square/ivan-bautista-vasijas-final.jpg',
       category: 2,
@@ -60,7 +67,8 @@ const projectsDb = {
     },
     {
       id: 8,
-      title: 'Kid mostro - challenge',
+      title: 'KID MOSTRO',
+      description: 'A practice of fur grooming and lighting',
       cover:
         'https://cdnb.artstation.com/p/assets/images/images/018/831/139/smaller_square/ivan-bautista-kidmostro-camera1.jpg',
       category: 2,
@@ -68,7 +76,8 @@ const projectsDb = {
     },
     {
       id: 9,
-      title: 'GRIM - Fan art',
+      title: 'GRIM',
+      description: 'The grim fan art from Billy & Mandy',
       cover:
         'https://cdnb.artstation.com/p/assets/images/images/018/378/367/smaller_square/ivan-bautista-huesos-final-smoke.jpg',
       category: 2,
@@ -76,7 +85,8 @@ const projectsDb = {
     },
     {
       id: 10,
-      title: 'Reinhardt - Fan art',
+      title: 'REINHARDT',
+      description: 'Reinhardt fan art from overwatch',
       cover:
         'https://cdnb.artstation.com/p/assets/images/images/018/364/081/smaller_square/ivan-bautista-final-rein.jpg',
       category: 2,
@@ -380,10 +390,9 @@ const projectsDb = {
     },
     {
       id: 1,
-      idPortfolioList: 1,
+      idPortfolioList: 6,
       src:
         'https://cdna.artstation.com/p/assets/images/images/018/363/916/large/ivan-bautista-vasijas-final.jpg',
-
       alt: '',
     },
   ],

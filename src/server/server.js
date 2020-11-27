@@ -64,12 +64,41 @@ const setResponse = (html, preloadedState, manifest) => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
+        body{
+          font-family:'Khand';
+        }
         .main-header {
           padding-top: calc(555 / 1713 * 100vw - 1vw);
+          font-family: 'Khand';
+        }
+        .main-header__title .main-header__profession {
+          font-family:'Khand';
+          font-size: 3.4rem;
+        }
+        .main-header__title .main-header__name {
+          font-family:'Khand';
+          font-size: 2.4rem;
         }
         .main-about {
           max-height:795px;
         }
+        @media only screen and (max-width: 768px){
+          .main-header {
+            padding-top: calc(555 / 1713 * 100vw - 1vw);
+            font-family: 'Khand';
+          }
+          .main-header__title{
+              left: 23%;
+          }             
+          .main-header__title .main-header__profession {
+              font-size: 3.4rem;
+          }
+          .main-header__title .main-header__name {
+                font-size: 2.4rem;
+          }
+                      
+        }
+        
         </style>
         <title>Ivanrice</title>
       </head>

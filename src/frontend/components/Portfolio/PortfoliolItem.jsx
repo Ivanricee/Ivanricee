@@ -15,6 +15,7 @@ const PortfolioItem = ({
   portfolioItem,
   id,
   title,
+  description,
   cover,
   tools,
   animationInc,
@@ -81,7 +82,8 @@ const PortfolioItem = ({
           </div>
           <img alt={`${title}`} src={`${cover}`} />
           <div className="main-portfolio__item-text">
-            <p>{`${title}`}</p>
+            <h2>{`${title}`}</h2>
+            <p>{`${description}`}</p>
           </div>
         </div>
       </NavLink>

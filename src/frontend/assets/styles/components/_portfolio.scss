@@ -5,7 +5,16 @@
   padding-bottom: 85px;
   background-color: #5d5cd9;
   clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 94%);
-
+  p {
+    padding: 0;
+    font-size: 0.88rem;
+  }
+  h2 {
+    font-weight: bold;
+    font-family: 'Khand';
+    font-size: 1.3rem;
+    color: $clear_color;
+  }
   min-height: 800px;
   &__nodata {
     width: 100%;
@@ -120,10 +129,10 @@
         }
       }
       #{$self}__item-text {
-        position: relative;
+        //position: relative;
         text-align: center;
-        margin-top: 30px;
-        &::before {
+        margin-top: 10px;
+        /* &::before {
           content: '';
           width: 25%;
           position: absolute;
@@ -131,7 +140,7 @@
           height: 3px;
           left: 65px;
           bottom: 38px;
-        }
+        }*/
       }
     }
   }
