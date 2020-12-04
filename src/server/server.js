@@ -120,9 +120,6 @@ const setResponse = (html, preloadedState, manifest) => {
 }
 const PORTFOLIO = '/portfolio/'
 const renderApp = async (req, res) => {
-  console.log('------------ server  req: ----------------')
-  console.log(req.url)
-
   let initialState
   let menu
   let portfolioMenu
@@ -192,7 +189,6 @@ const renderApp = async (req, res) => {
   )
 
   // context.url will contain the URL to redirect to if a <Redirect> was used
-  console.log('context: ', context)
   if (context.url) {
     /*res.writeHead(302, {
       Location: context.url,
