@@ -6,7 +6,7 @@ require('ignore-styles')
 //nos permite hacer un bin en tiempo real de cualquier paquete que necesitemos
 require('@babel/register')({
   ignore: [/(node_modules)/],
-  extends: './.babelrc',
+  extends: '.babelrc',
 })
 
 //cargamos los assets desde el lado del server
