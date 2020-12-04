@@ -21,6 +21,8 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
     "@babel/register": "^7.10.1",
     "asset-require-hook": "^1.2.0",
     "axios": "^0.19.2",
@@ -44,8 +46,6 @@
   },
   "devDependencies": {
     "@vercel/node": "^1.7.4",
-    "@babel/preset-env": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "eslint-config-airbnb": "^18.1.0",
