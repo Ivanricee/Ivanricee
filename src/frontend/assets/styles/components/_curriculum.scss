@@ -33,7 +33,7 @@
 
   section {
     h2 {
-      @include box-title;
+      @include box-title(1.25em);
     }
     p {
       @include parrafo;
@@ -106,7 +106,11 @@
     align-items: center;
     height: auto;
     padding: 0 20% 50px 20%;
-    //padding-bottom: 50px;
+    &-mail {
+      h4 {
+        line-height: 3em;
+      }
+    }
   }
   &__section-a {
     grid-area: sectiona;
@@ -131,8 +135,9 @@
       'sectiona sectionb'
       'sectionc sectionc ';
     &__section-c {
-      padding-top: 50px;
+      margin-top: 25px;
     }
+
     #{$self}__section__icon {
       justify-content: space-evenly;
       padding: 0 10vw;
@@ -144,15 +149,18 @@
 
 @include media(desktop) {
   .main-cv {
-    grid-template: 80px 250px 1fr 1fr 1fr/ 1fr;
+    grid-template: 95px 250px 1fr 1fr 1fr/ 1fr;
     grid-template-areas:
       'title '
       'career'
       'sectiona'
       'sectionb'
       'sectionc';
-    .main-cv__section-c {
+    /*.main-cv__section-c {
       margin-top: 5%;
+    }*/
+    &__section-b {
+      margin-top: 25px;
     }
   }
 }
@@ -169,13 +177,25 @@
 @media only screen and (max-width: 600px) {
   .main-cv {
     $self: &;
-    grid-template: 80px 320px 1fr 1fr 1fr/ 72vw;
+    grid-template: 85px 320px 1fr 1fr 1fr/ 72vw;
     grid-template-areas:
       'title '
       'career'
       'sectiona'
       'sectionb'
       'sectionc';
+    section {
+      h2 {
+        @include box-title(1em);
+      }
+      #{$self}__subtitle {
+        color: lighten(#dad4ec, $amount: 7);
+        width: 100%;
+        font-size: 1.1em;
+        margin-top: 1.1em;
+        margin-bottom: 0.9em;
+      }
+    }
     .main__title {
       h1 {
         font-size: 1.2rem;

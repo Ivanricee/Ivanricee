@@ -20,7 +20,14 @@ const Curriculum = (props) => {
             I am characterized by my teamwork and collaboration, successful
             communication, adaptability and flexibility to change.
           </p>
-          <p> I´m looking for a frontend developer position</p>
+          <p> I am looking for a frontend developer position</p>
+
+          <a
+            className="main-cv__section-career-mail"
+            href="mailto:	ivanbautistag@gmail.com"
+          >
+            <h4>CONTACT</h4>
+          </a>
         </div>
       </section>
       <section className="main-cv__section-a">

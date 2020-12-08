@@ -60,7 +60,7 @@ body {
       min-height: auto;
     }
     & .modal__title {
-      @include box_title;
+      @include box_title(1.25em);
       margin-bottom: 3%;
     }
     & .modal__icon {

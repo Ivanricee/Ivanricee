@@ -98,9 +98,9 @@ $background_contact_card: darken(
     padding: 5px 0;
   }
 }
-@mixin box-title {
+@mixin box-title($fontsize) {
   display: flex;
-  font-size: 1.25em;
+  font-size: $fontsize;
   align-items: center;
   padding: 7px;
   height: 40px;

@@ -160,7 +160,7 @@ const renderApp = async (req, res) => {
       portfolioMenu: Number(portfolioMenu),
       modal: false,
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:good/v1596741394/introduce.png',
+        'https://res.cloudinary.com/ivanrice-c/image/upload/v1607456278/ivanrice/header_ne_d8oiez.jpg',
       portfolioList: projects.portfolioList,
       img_items: projects.img_items,
     }
@@ -170,7 +170,7 @@ const renderApp = async (req, res) => {
       portfolioMenu: Number(portfolioMenu),
       modal: false,
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/q_auto:good/v1596741394/introduce.png',
+        'https://res.cloudinary.com/ivanrice-c/image/upload/v1607456278/ivanrice/header_ne_d8oiez.jpg',
       portfolioList: [],
       img_items: [],
     }
