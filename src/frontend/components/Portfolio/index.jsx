@@ -33,7 +33,6 @@ const Portfolio = (props) => {
   }
   return (
     <>
-      {console.log('Menu per deffect', !props.portfolioMenu)}
       <div className="main__title">
         <h1>PORTFOLIO</h1>
       </div>

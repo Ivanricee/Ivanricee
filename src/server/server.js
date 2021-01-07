@@ -112,9 +112,9 @@ const setResponse = (html, preloadedState, manifest) => {
         </script>
         <link as="font" href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="preload"> 
         <link as="font" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap" rel="preload">     
-        <link  rel="stylesheet" type="text/css" href="${mainStyles}">
-        <script src="${mainBuild}" type="text/javascript"></script>
-        <script src="${vendorBuild}" type="text/javascript"></script>
+        <link  rel="stylesheet" type="text/css" href="${mainStyles}.gz">
+        <script src="${mainBuild}.gz" type="text/javascript"></script>
+        <script src="${vendorBuild}.gz" type="text/javascript"></script>
       </body>
     </html>`
 }

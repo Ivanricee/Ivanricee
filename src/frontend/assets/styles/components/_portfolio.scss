@@ -127,6 +127,32 @@
           padding: 1px;
           font-size: 1.5rem;
         }
+        & img {
+          position: relative;
+          padding: 0.5px;
+          width: 24px;
+          height: auto;
+          background: none;
+          box-shadow: none;
+        }
+        & span[alt-tooltip] {
+          &:hover {
+            &::after {
+              content: attr(alt-tooltip) ' ';
+              position: absolute;
+              left: 20%;
+              top: 44px;
+              // min-width: 200px;
+              border: 1px #3f3eb3 solid;
+              border-radius: 10px;
+              background-color: #4746bf;
+              padding: 7px;
+              color: #bbcaff;
+              font-size: 1em;
+              z-index: 1;
+            }
+          }
+        }
       }
       #{$self}__item-text {
         //position: relative;

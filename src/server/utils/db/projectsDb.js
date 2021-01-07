@@ -45,7 +45,7 @@ const projectsDb = {
       cover:
         'https://cdnb.artstation.com/p/assets/images/images/027/424/717/20200607002852/smaller_square/ivan-bautista-nave-final.jpg?1591507733',
       category: 2,
-      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
+      tools: ['mari', 'nuke', 'rizom', 'maya', 'arnold', 'zbrush'],
     },
     {
       id: 6,
@@ -54,7 +54,7 @@ const projectsDb = {
       cover:
         'https://cdna.artstation.com/p/assets/images/images/030/401/790/smaller_square/ivan-bautista-clancy-w.jpg',
       category: 2,
-      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
+      tools: ['zbrush', 'maya', 'redshift', 'rizom'],
     },
     {
       id: 7,
@@ -63,7 +63,7 @@ const projectsDb = {
       cover:
         'https://cdna.artstation.com/p/assets/images/images/018/363/916/smaller_square/ivan-bautista-vasijas-final.jpg',
       category: 2,
-      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
+      tools: ['substance', 'nuke', 'maya', 'arnold', 'rizom', 'mari'],
     },
     {
       id: 8,
@@ -72,7 +72,7 @@ const projectsDb = {
       cover:
         'https://cdnb.artstation.com/p/assets/images/images/018/831/139/smaller_square/ivan-bautista-kidmostro-camera1.jpg',
       category: 2,
-      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
+      tools: ['mari', 'arnold', 'rizom', 'maya', 'zbrush', 'nuke'],
     },
     {
       id: 9,
@@ -81,7 +81,7 @@ const projectsDb = {
       cover:
         'https://cdnb.artstation.com/p/assets/images/images/018/378/367/smaller_square/ivan-bautista-huesos-final-smoke.jpg',
       category: 2,
-      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
+      tools: ['rizom', 'arnold', 'nuke', 'mari', 'maya'],
     },
     {
       id: 10,
@@ -90,7 +90,7 @@ const projectsDb = {
       cover:
         'https://cdnb.artstation.com/p/assets/images/images/018/364/081/smaller_square/ivan-bautista-final-rein.jpg',
       category: 2,
-      tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
+      tools: ['mari', 'arnold', 'substance', 'maya', 'rizom'],
     },
   ],
   img_items: [
