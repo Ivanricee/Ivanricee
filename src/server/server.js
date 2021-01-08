@@ -121,7 +121,7 @@ const setResponse = (html, preloadedState, manifest) => {
 }
 const PORTFOLIO = '/portfolio/'
 const renderApp = async (req, res) => {
-  res.setHeader('Content-Encoding', 'gzip')
+  //res.setHeader('Content-Encoding', 'gzip')
   let initialState
   let menu
   let portfolioMenu
