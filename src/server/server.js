@@ -10,12 +10,12 @@ import { renderToString } from 'react-dom/server'
 import { createStore } from 'redux'
 import { renderRoutes } from 'react-router-config'
 import { StaticRouter } from 'react-router'
+import compression from 'compression'
 import serverRoutes from '../frontend/routes/serverRoutes'
 import reducer from '../frontend/reducers/index'
 //import initialState from '../frontend/initialState'
 import Layout from '../frontend/containers/Layout'
 import getManifest from './getManifest'
-
 //Require a projects DB image for initialState
 const { projectsDb } = require('./utils/db/projectsDb')
 //const bodyParser = require('body-parser')
@@ -46,6 +46,7 @@ if (ENV === 'development') {
   })
   //production carpeta publica
   app.use(express.static(`${__dirname}/public`))
+  app.use(compression())
   app.use(helmet())
   app.use(helmet.permittedCrossDomainPolicies())
   //deshabilitamos la cabecera x-powered-by
@@ -112,14 +113,15 @@ const setResponse = (html, preloadedState, manifest) => {
         </script>
         <link as="font" href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="preload"> 
         <link as="font" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap" rel="preload">     
-        <link  rel="stylesheet" type="text/css" href="${mainStyles}.gz">
-        <script src="${mainBuild}.gz" type="text/javascript"></script>
-        <script src="${vendorBuild}.gz" type="text/javascript"></script>
+        <link  rel="stylesheet" type="text/css" href="${mainStyles}">
+        <script src="${mainBuild}" type="text/javascript"></script>
+        <script src="${vendorBuild}" type="text/javascript"></script>
       </body>
     </html>`
 }
 const PORTFOLIO = '/portfolio/'
 const renderApp = async (req, res) => {
+  res.setHeader('Content-Encoding', 'gzip')
   let initialState
   let menu
   let portfolioMenu

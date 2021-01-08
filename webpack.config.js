@@ -108,14 +108,7 @@ module.exports = {
       test: /\.js$|\.css$/,
       filename: '[path].gz'
     }),
-        isDev ? () => { } :  new ManifestPlugin({
-          fileName: 'manifest.json',
-         seed:{
-           "main.css": "/assets/app-[hash].css.gz",
-            "main.js": "/assets/app-[hash].js.gz",
-            "vendors.js": "/assets/vendor-[hash].js.gz",
-         } 
-        }),
+        isDev ? () => { } :  new ManifestPlugin(),
     new MiniCssExtractPlugin({
       filename: isDev ? 'assets/app.css' : 'assets/app-[hash].css',
     }),
