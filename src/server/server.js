@@ -111,8 +111,8 @@ const setResponse = (html, preloadedState, manifest) => {
           '\\u003c'
         )}
         </script>
-        <link as="font" href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" > 
-        <link as="font" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap" >     
+        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" > 
+        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap" >     
         <link  rel="stylesheet" type="text/css" href="${mainStyles}">
         <script src="${mainBuild}" type="text/javascript"></script>
         <script src="${vendorBuild}" type="text/javascript"></script>
