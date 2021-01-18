@@ -72,6 +72,9 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    display: -webkit-flex;
+    flex-wrap: -webkit-wrap;
+
     gap: 30px;
     justify-content: flex-start;
     height: max-content;
@@ -86,6 +89,8 @@
     min-height: 233px;
     max-height: max-content;
     max-height: -moz-max-content;
+    max-height: -webkit-maxcontent;
+
     opacity: 0;
     animation: rebote 0.3s ease-in-out;
     animation-fill-mode: forwards;

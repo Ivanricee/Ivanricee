@@ -106,4 +106,4 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
   setHashMenu,
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Nav)
+export default React.memo(connect(mapStateToProps, mapDispatchToProps)(Nav))

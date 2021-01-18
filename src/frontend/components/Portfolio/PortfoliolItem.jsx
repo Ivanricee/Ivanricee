@@ -52,63 +52,63 @@ const PortfolioItem = ({
               switch (tool) {
                 case 'css':
                   return (
-                    <span alt-tooltip="CSS 3">
+                    <span alt-tooltip="CSS 3" key={id + tool}>
                       <IoLogoCss3 key={id + tool} />
                     </span>
                   )
                   break
                 case 'html':
                   return (
-                    <span alt-tooltip="HTML 5">
+                    <span alt-tooltip="HTML 5" key={id + tool}>
                       <IoLogoHtml5 key={id + tool} />
                     </span>
                   )
                   break
                 case 'php':
                   return (
-                    <span alt-tooltip="PHP">
+                    <span alt-tooltip="PHP" key={id + tool}>
                       <SiPhp key={id + tool} />
                     </span>
                   )
                   break
                 case 'jquery':
                   return (
-                    <span alt-tooltip="JQuery">
+                    <span alt-tooltip="JQuery" key={id + tool}>
                       <SiJquery key={id + tool} />
                     </span>
                   )
                   break
                 case 'bootstrap':
                   return (
-                    <span alt-tooltip="Bootstrap">
+                    <span alt-tooltip="Bootstrap" key={id + tool}>
                       <SiBootstrap key={id + tool} />
                     </span>
                   )
                   break
                 case 'mysql':
                   return (
-                    <span alt-tooltip="MySQL">
+                    <span alt-tooltip="MySQL" key={id + tool}>
                       <SiMysql key={id + tool} />
                     </span>
                   )
                   break
                 case 'angular':
                   return (
-                    <span alt-tooltip="Angular 2">
+                    <span alt-tooltip="Angular 2" key={id + tool}>
                       <SiAngular key={id + tool} />
                     </span>
                   )
                   break
                 case 'react':
                   return (
-                    <span alt-tooltip="React js + Redux">
+                    <span alt-tooltip="React js + Redux" key={id + tool}>
                       <FaReact key={id + tool} />
                     </span>
                   )
                   break
                 case 'arnold':
                   return (
-                    <span alt-tooltip="Arnold render">
+                    <span alt-tooltip="Arnold render" key={id + tool}>
                       <img
                         src="https://res.cloudinary.com/ivanrice-c/image/upload/v1609285677/portfolio/icons/arnold_fywzrf.png"
                         alt="Arnold render"
@@ -118,7 +118,7 @@ const PortfolioItem = ({
                   break
                 case 'maya':
                   return (
-                    <span alt-tooltip="Autodesk maya">
+                    <span alt-tooltip="Autodesk maya" key={id + tool}>
                       <img
                         src="https://res.cloudinary.com/ivanrice-c/image/upload/v1609285677/portfolio/icons/maya_mvhgmh.png"
                         alt="Autodesk maya"
@@ -128,7 +128,7 @@ const PortfolioItem = ({
                   break
                 case 'nuke':
                   return (
-                    <span alt-tooltip="The foundry Nuke">
+                    <span alt-tooltip="The foundry Nuke" key={id + tool}>
                       <img
                         src="https://res.cloudinary.com/ivanrice-c/image/upload/v1609285677/portfolio/icons/nuke_th3pum.png"
                         alt="The foundry nuke"
@@ -138,7 +138,7 @@ const PortfolioItem = ({
                   break
                 case 'rizom':
                   return (
-                    <span alt-tooltip="Rizom Uv">
+                    <span alt-tooltip="Rizom Uv" key={id + tool}>
                       <img
                         src="https://res.cloudinary.com/ivanrice-c/image/upload/v1609285677/portfolio/icons/rizomuv_uaxnda.png"
                         alt="Rizom Uv"
@@ -148,7 +148,7 @@ const PortfolioItem = ({
                   break
                 case 'redshift':
                   return (
-                    <span alt-tooltip="Redshift render">
+                    <span alt-tooltip="Redshift render" key={id + tool}>
                       <img
                         src="https://res.cloudinary.com/ivanrice-c/image/upload/v1609286796/portfolio/icons/redshift_bzbnze.png"
                         alt="Redshift render"
@@ -159,7 +159,7 @@ const PortfolioItem = ({
 
                 case 'substance':
                   return (
-                    <span alt-tooltip="Substance Designer">
+                    <span alt-tooltip="Substance Designer" key={id + tool}>
                       <img
                         src="https://res.cloudinary.com/ivanrice-c/image/upload/v1609285677/portfolio/icons/substance_bpjo6v.png"
                         alt="Substance designer"
@@ -169,7 +169,7 @@ const PortfolioItem = ({
                   break
                 case 'zbrush':
                   return (
-                    <span alt-tooltip="Pixologic Zbrush">
+                    <span alt-tooltip="Pixologic Zbrush" key={id + tool}>
                       <img
                         src="https://res.cloudinary.com/ivanrice-c/image/upload/v1609285677/portfolio/icons/substance_bpjo6v.png"
                         alt="zbrush"
@@ -179,7 +179,7 @@ const PortfolioItem = ({
                   break
                 case 'mari':
                   return (
-                    <span alt-tooltip="The foundry Mari">
+                    <span alt-tooltip="The foundry Mari" key={id + tool}>
                       <img
                         src="https://res.cloudinary.com/ivanrice-c/image/upload/v1609285677/portfolio/icons/mari_uq9jsd.png"
                         alt="The foundry mari"

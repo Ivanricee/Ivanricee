@@ -15,10 +15,10 @@
   font-family: 'Khand';
   &__title {
     will-change: opacity, transform;
-    animation-name: opacity, translatey;
+    /*  animation-name: opacity, translatey;
     animation-duration: 0.3s, 0.3s;
     animation-timing-function: linear, cubic-bezier(0, 0.61, 0.42, 0.99);
-    animation-fill-mode: forwards, forwards;
+    animation-fill-mode: forwards, forwards;*/
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -30,16 +30,16 @@
     top: 0;
     text-align: center;
     #{$self}__profession {
-      animation: translatex 0.2s cubic-bezier(0.67, 0.01, 0.63, 0.99) 0.4s;
-      animation-fill-mode: forwards;
+      //  animation: translatex 0.2s cubic-bezier(0.67, 0.01, 0.63, 0.99) 0.4s;
+      //  animation-fill-mode: forwards;
       line-height: 1em;
       width: 100%;
       font-weight: bold;
       font-size: 6.5rem;
     }
     #{$self}__name {
-      animation: translatex 0.2s cubic-bezier(0.67, 0.01, 0.63, 0.99) 0.46s;
-      animation-fill-mode: forwards;
+      //  animation: translatex 0.2s cubic-bezier(0.67, 0.01, 0.63, 0.99) 0.46s;
+      //  animation-fill-mode: forwards;
       line-height: 1em;
       width: 100%;
       font-weight: 500;
