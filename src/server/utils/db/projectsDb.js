@@ -7,7 +7,7 @@ const projectsDb = {
       title: 'SCORM COURSES',
       description: 'UI/UX & Frontend development',
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/v1607464629/portfolio/uiux_courses/cover_qdqtrt.jpg',
+        'https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,w_350/v1607464629/portfolio/uiux_courses/cover_qdqtrt.jpg',
       category: 1,
       tools: ['css', 'html', 'php', 'jquery', 'bootstrap'],
     },
@@ -16,7 +16,7 @@ const projectsDb = {
       title: 'FILE MANAGER',
       description: 'Php - Angular fullstack development',
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/v1607457390/portfolio/register/cover_u2sfu8.jpg',
+        'https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,w_350/v1607457390/portfolio/register/cover_u2sfu8.jpg',
       category: 1,
       tools: ['angular', 'html', 'php', 'css', 'bootstrap', 'mysql'],
     },
@@ -25,7 +25,7 @@ const projectsDb = {
       title: 'SCHOOL MANAGER',
       description: 'React - php fullstack development',
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/v1607459514/portfolio/sigem/cover_rzgzjm.jpg',
+        'https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,w_350/v1607459514/portfolio/sigem/cover_rzgzjm.jpg',
       category: 1,
       tools: ['react', 'html', 'php', 'css', 'bootstrap'],
     },
@@ -34,7 +34,7 @@ const projectsDb = {
       title: 'VEHICLE INSURANCE',
       description: 'Webservice - lamp fullstack development',
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/v1607724480/portfolio/saas/cover_dhddwu.jpg',
+        'https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,w_350/v1607724480/portfolio/saas/cover_dhddwu.jpg',
       category: 1,
       tools: ['html', 'php', 'jquery', 'css', 'bootstrap', 'mysql'],
     },
