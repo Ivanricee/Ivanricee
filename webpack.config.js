@@ -35,7 +35,7 @@ module.exports = {
       cacheGroups:{
         vendors:{
           name:'vendors', //al importar dependencias dinamicas tiene problemas por el nombre vendors
-          chunks: 'all',
+          chunks: 'initial',
           reuseExistingChunk: true,
           priority:1,
           filename:isDev ? 'assets/vendor.js' : 'assets/vendor-[hash].js',

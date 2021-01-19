@@ -5,15 +5,21 @@ import React, { useEffect, useState } from 'react'
 import { Redirect, useLocation, useParams } from 'react-router'
 import { connect } from 'react-redux'
 
+import loadable from '@loadable/component';
 import Header from '../components/Header'
 import Nav from '../components/Nav'
 import About from '../components/About'
 import Profilesvg from '../components/Profilesvg'
-import Portfolio from '../components/Portfolio'
+//import Portfolio from '../components/Portfolio'
 import Reel from '../components/Reel'
 import Curriculum from '../components/Curriculum'
 import useMenuObserver from '../components/hooks/useMenuObserver'
 
+const Portfolio = loadable(
+   ()=>import('../components/Portfolio'), {
+     fallback: <h1>Un momento</h1>
+   }
+)
 const Home = ({
   menu,
   modal,
