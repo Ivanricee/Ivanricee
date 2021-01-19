@@ -11,5 +11,5 @@
     "@babel/preset-react" //jsx y react
   ],
   //carga reacthotloader con babel
-  "plugins": ["react-hot-loader/babel"]
+  "plugins": ["react-hot-loader/babel", "@loadable/babel-plugin"]
 }

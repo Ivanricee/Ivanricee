@@ -5,6 +5,7 @@ const compressionWebpackPlugin = require('compression-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const LoadablePlugin = require('@loadable/webpack-plugin');
 
 require('dotenv').config()
 const isDev = (process.env.ENV === 'development')
@@ -98,10 +99,10 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    
+    isDev ? new LoadablePlugin() : ()=>{},
     //plugins necesitados
     //refrescado en tiempo real
-    isDev? () => {} : new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'src/server/public')}),
+    isDev ? () => {} : new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'src/server/public')}),
     isDev ? new webpack.HotModuleReplacementPlugin() : ()=>{},
     isDev ? () => {} : new compressionWebpackPlugin({
       algorithm: "gzip",
