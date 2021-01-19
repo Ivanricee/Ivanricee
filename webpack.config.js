@@ -99,7 +99,7 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    isDev ? new LoadablePlugin() : ()=>{},
+     new LoadablePlugin(),
     //plugins necesitados
     //refrescado en tiempo real
     isDev ? () => {} : new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'src/server/public')}),
