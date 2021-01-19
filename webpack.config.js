@@ -6,7 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const LoadablePlugin = require('@loadable/webpack-plugin');
-
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 require('dotenv').config()
 const isDev = (process.env.ENV === 'development')
 const entry = ['./src/frontend/index.js'];
@@ -100,6 +100,10 @@ module.exports = {
   },
   plugins: [
      new LoadablePlugin(),
+     isDev ? new BundleAnalyzerPlugin({
+      analyzerMode:  'static', //para que lo haga sólo al momento de hacer el build
+      openAnalyzer:  true, //para que nos muestre el resultado inmediatamente
+    }) : ()=>{},
     //plugins necesitados
     //refrescado en tiempo real
     isDev ? () => {} : new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'src/server/public')}),
@@ -109,7 +113,7 @@ module.exports = {
       test: /\.js$|\.css$/,
       filename: '[path].gz'
     }),
-        isDev ? () => { } :  new ManifestPlugin(),
+        isDev ? () => { } :  new ManifestPlugin({ filename: 'loadable-stats', writeToDisk: true }),
     new MiniCssExtractPlugin({
       filename: isDev ? 'assets/app.css' : 'assets/app-[hash].css',
     }),
