@@ -3,11 +3,22 @@ import React from 'react'
 const Profilesvg = () => {
   return (
     <div className="main-profile">
-      <img
-        className="main-profile__prof-img"
-        alt="profile"
-        src="https://res.cloudinary.com/ivanrice-c/image/upload/v1605297167/ivanrice/foto_prof_fx0xfd.png"
-      />
+      <picture>
+        <source
+          srcSet="https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,w_156/v1605297167/ivanrice/foto_prof_fx0xfd.png"
+          media="(max-width:700px)"
+        />
+        <source
+          srcSet="https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,w_/v1605297167/ivanrice/foto_prof_fx0xfd.png"
+          media="(max-width:400px)"
+        />
+        <source srcSet="https://res.cloudinary.com/ivanrice-c/image/upload/v1605297167/ivanrice/foto_prof_fx0xfd.png" />
+        <img
+          className="main-profile__prof-img"
+          alt="profile"
+          src="https://res.cloudinary.com/ivanrice-c/image/upload/v1605297167/ivanrice/foto_prof_fx0xfd.png"
+        />
+      </picture>
       <svg width="100%" height="100%" viewBox="260 150 1500 500">
         <path
           stroke="#4C449A"

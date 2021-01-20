@@ -25,7 +25,7 @@ const projectsDb = {
       title: 'SCHOOL MANAGER',
       description: 'React - php fullstack development',
       cover:
-        'https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,w_350/v1607459514/portfolio/sigem/cover_rzgzjm.jpg',
+        'https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,q_auto:low,w_278/v1607459514/portfolio/sigem/cover_rzgzjm.jpg',
       category: 1,
       tools: ['react', 'html', 'php', 'css', 'bootstrap'],
     },
