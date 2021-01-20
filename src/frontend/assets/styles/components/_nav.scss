@@ -1,7 +1,7 @@
 .main-nav {
   position: absolute;
   z-index: 2;
-  @include header-ratio(top, 7vw);
+  @include header-ratio(top, 555, 1713, 7vw);
   left: 60vw;
   width: 36%;
   font-family: $nav-font;
@@ -37,7 +37,7 @@
 //menu fix
 @include media(desktop) {
   .main-nav {
-    @include header-ratio(top, 4vw);
+    @include header-ratio(top, 410, 1058, 4vw);
     left: 55vw;
   }
 }
@@ -69,4 +69,7 @@
       }
     }
   }
+}
+@include media(mobile-xs) {
+  @include header-ratio(top, 240, 620, 22.9vw);
 }

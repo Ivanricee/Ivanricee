@@ -27,9 +27,9 @@ $background_contact_card: darken(
 //------------------------------------------------
 //mixin
 
-@mixin header-ratio($property, $fix-ratio) {
+@mixin header-ratio($property, $height, $width, $fix-ratio) {
   /*ratio img h/w*wrapper  */
-  #{$property}: calc(555 / 1713 * 100vw - #{$fix-ratio});
+  #{$property}: calc(#{$height} / #{$width} * 100vw - #{$fix-ratio});
 }
 @mixin button {
   font-family: $nav-font;

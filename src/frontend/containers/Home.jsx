@@ -6,20 +6,52 @@ import { Redirect, useLocation, useParams } from 'react-router'
 import { connect } from 'react-redux'
 
 import loadable from '@loadable/component';
-import Header from '../components/Header'
-import Nav from '../components/Nav'
-import About from '../components/About'
-import Profilesvg from '../components/Profilesvg'
+
+//import Header from '../components/Header'
+//import Nav from '../components/Nav'
+//import About from '../components/About'
+//import Profilesvg from '../components/Profilesvg'
 //import Portfolio from '../components/Portfolio'
-import Reel from '../components/Reel'
-import Curriculum from '../components/Curriculum'
+//import Reel from '../components/Reel'
+//import Curriculum from '../components/Curriculum'
 import useMenuObserver from '../components/hooks/useMenuObserver'
 
-const Portfolio = loadable(
-   ()=>import('../components/Portfolio'), {
-     fallback: <h1>Un momento</h1>
-   }
+const Header = loadable(
+  ()=>import('../components/Header'), {
+    fallback: <h1>Un momento</h1>
+  }
 )
+const Nav = loadable(
+  ()=>import('../components/Nav'), {
+    fallback: <h1>Un momento</h1>
+  }
+)
+const About = loadable(
+  ()=>import('../components/About'), {
+    fallback: <h1>Un momento</h1>
+  }
+)
+const Profilesvg = loadable(
+  ()=>import('../components/Profilesvg'), {
+    fallback: <h1>Un momento</h1>
+  }
+)
+const Portfolio = loadable(
+  ()=>import('../components/Portfolio'), {
+    fallback: <h1>Un momento</h1>
+  }
+)
+const Reel = loadable(
+  ()=>import('../components/Reel'), {
+    fallback: <h1>Un momento</h1>
+  }
+)
+const Curriculum = loadable(
+  ()=>import('../components/Curriculum'), {
+    fallback: <h1>Un momento</h1>
+  }
+)
+
 const Home = ({
   menu,
   modal,

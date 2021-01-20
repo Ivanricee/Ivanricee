@@ -9,7 +9,7 @@
   object-fit: cover;
   background-size: 100% auto;
   background-position: 0 -6.6vw;
-  @include header-ratio(padding-top, 1vw);
+  @include header-ratio(padding-top, 555, 1713, 1vw);
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
   color: $clear_color;
   font-family: 'Khand';
@@ -63,6 +63,12 @@
 @include media(desktop) {
   .main-header {
     $self: &;
+    background: $dark_color
+      url('https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,w_1058/v1607456278/ivanrice/header_ne_d8oiez.jpg');
+    @include header-ratio(padding-top, 410, 1058, 7.5vw);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 -6.6vw;
     #{$self}__profession {
       font-size: 4.2rem;
     }
@@ -87,7 +93,16 @@
     }
   }
 }
-
+@include media(mobile-xs) {
+  .main-header {
+    background: $dark_color
+      url('https://res.cloudinary.com/ivanrice-c/image/upload/c_scale,w_620/v1607456278/ivanrice/header_ne_d8oiez.jpg');
+    @include header-ratio(padding-top, 240, 620, 7.5vw);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 -6.6vw;
+  }
+}
 //phones
 @include media(mobile-portrait) {
   .main-header {

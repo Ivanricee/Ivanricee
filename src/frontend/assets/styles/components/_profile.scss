@@ -1,7 +1,7 @@
 .main-profile {
   position: absolute;
   right: 0;
-  @include header-ratio(top, 22.9vw);
+  @include header-ratio(top, 555, 1713, 22.9vw);
   left: 16%;
   &__prof-img {
     will-change: opacity, transform;
@@ -13,3 +13,10 @@
     animation: rebote 0.45s cubic-bezier(0.38, 1.76, 0.74, 0.98);
   }
 }
+/*@include media(desktop) {
+  @include header-ratio(top, 410, 1058, 22.9vw);
+}
+
+@include media(mobile-xs) {
+  @include header-ratio(top, 240, 620, 22.9vw);
+}*/
