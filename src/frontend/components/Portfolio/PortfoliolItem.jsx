@@ -7,10 +7,14 @@ import { IoLogoCss3, IoLogoHtml5 } from 'react-icons/io'
 import { SiPhp, SiJquery, SiBootstrap, SiMysql, SiAngular } from 'react-icons/si'
 import { FaReact } from 'react-icons/fa'
 
-import ModalItem from './ModalItem'
+//import ModalItem from './ModalItem'
+import loadable from '@loadable/component'
 import { setModalOpen } from '../../actions'
 import Portal from '../utils/Portal'
 
+const ModalItem = loadable(() => import('./ModalItem'), {
+  fallback: <h3>Loading portfolio</h3>,
+})
 const PortfolioItem = ({
   portfolioItem,
   id,
