@@ -31,7 +31,13 @@ body {
       transform: scale(1.1, 1.1);
     }
   }
-
+  & .init_loader {
+    color: rgb(182, 181, 209);
+    display: flexbox;
+    background-color: rgb(105, 104, 153);
+    width: 100vw;
+    padding-bottom: 50px;
+  }
   & #modal {
     position: fixed;
     display: flex;

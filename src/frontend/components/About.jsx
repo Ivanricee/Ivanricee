@@ -22,9 +22,9 @@ const About = () => {
           </p>
           <p>
             My passion for learning led me to study design and 3D while I was working
-            as a fullstack developer.
+            as a fullstack developer. That helped me a lot to specialize as a
+            frontend developer
           </p>
-          <p>That helped me a lot to specialize as a frontend developer</p>
         </div>
         <div className="main-about__contact">
           <h2>Contact</h2>

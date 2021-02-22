@@ -7,40 +7,21 @@ import { connect } from 'react-redux'
 
 import loadable from '@loadable/component';
 import useMenuObserver from '../components/hooks/useMenuObserver'
+import Header from '../components/Header'
+import Nav from '../components/Nav'
+import About from '../components/About'
+import Portfolio from '../components/Portfolio'
+import Reel from '../components/Reel'
 
-const Header = loadable(
-  ()=>import('../components/Header'), {
-    fallback: <h3>Un momento</h3>
-  }
-)
-const Nav = loadable(
-  ()=>import('../components/Nav'), {
-    fallback: <h3>Menú...</h3>
-  }
-)
-const About = loadable(
-  ()=>import('../components/About'), {
-    fallback: <h3>About..</h3>
-  }
-)
 const Profilesvg = loadable(
   ()=>import('../components/Profilesvg'), {
-    fallback: <h3>Perfil...</h3>
+    fallback: <h3 className="init_loader">Perfil...</h3>
   }
 )
-const Portfolio = loadable(
-  ()=>import('../components/Portfolio'), {
-    fallback: <h3>Un momento</h3>
-  }
-)
-const Reel = loadable(
-  ()=>import('../components/Reel'), {
-    fallback: <h3>Un momento</h3>
-  }
-)
+
 const Curriculum = loadable(
   ()=>import('../components/Curriculum'), {
-    fallback: <h3>Un momento</h3>
+    fallback: <h3 className="init_loader">Un momento</h3>
   }
 )
 

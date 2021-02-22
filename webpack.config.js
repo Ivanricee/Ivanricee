@@ -102,7 +102,7 @@ module.exports = {
      new LoadablePlugin(),
      isDev ? new BundleAnalyzerPlugin({
       analyzerMode:  'static', //para que lo haga sólo al momento de hacer el build
-      openAnalyzer:  true, //para que nos muestre el resultado inmediatamente
+      openAnalyzer:  false, //para que nos muestre el resultado inmediatamente
     }) : ()=>{},
     //plugins necesitados
     //refrescado en tiempo real
