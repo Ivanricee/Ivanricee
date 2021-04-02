@@ -21,7 +21,7 @@ const Profilesvg = loadable(
 
 const Curriculum = loadable(
   ()=>import('../components/Curriculum'), {
-    fallback: <h3 className="init_loader">Un momento</h3>
+    fallback: <h3 className="init_loader cv_loader">Un momento</h3>
   }
 )
 
@@ -38,9 +38,27 @@ const Home = ({
 //la ruta no se detenga en menus anteriores entorpeciendo el modal
 //ya que <Redirect> no esta cambiando la ruta y envie siempre la misma en el segudo paramentro
   const [portfolioParamAfterOpenModalbyUrl, setPortfolioParamAfterOpenModalbyUrl] = useState(false)
+  const [datar, setDatar] = useState([])
   const locationMenu = useLocation()
   const [menuScrollObserved, elementRef] = useMenuObserver({ portfolio, portfolioParamAfterOpenModalbyUrl })
 
+    useEffect(()=>{
+      const fetchData = async ()=>{
+
+        const resp = await fetch('https://datos.gob.mx/busca/api/3/action/package_search?q=naicm', {
+          method: 'GET',
+          mode: 'cors',
+          cache: 'no-cache',
+          headers: {
+              'Access-control-allow-origin': '*',
+              'content-type': 'application/json'
+          }
+        })
+        const respuesta = await resp.json()
+        return respuesta
+      }
+      setDatar(fetchData())
+    }, [])
   useEffect(() => {
     //cuando  el estado de menu cambie desde la url
     //o desde el Nav hara un scroll smoth
@@ -64,7 +82,7 @@ useEffect(()=>{
 
   return (
     <>
-
+      {console.log(datar)}
       {locationMenu.pathname !== `/portfolio/${portfolioMenu}0` &&
         menuScrollObserved === true &&
         modal === false && <Redirect to={`/portfolio/${portfolioMenu}0`} />}

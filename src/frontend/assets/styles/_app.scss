@@ -37,6 +37,9 @@ body {
     background-color: rgb(105, 104, 153);
     width: 100vw;
     padding-bottom: 50px;
+    .cv_loader {
+      padding-bottom: 500px;
+    }
   }
   & #modal {
     position: fixed;
