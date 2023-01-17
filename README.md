@@ -5,6 +5,7 @@
 - Currently looking for a Front-end position. 
 - I also practice and study daily about ui/ux.
 - And last but not least, i'm a 3D Artist too.
+- Contact me: [ivanbautistag@gmail.com](mailto:ivanbautistag@gmail.com)
 
 
 ## 🌐 Socials:
