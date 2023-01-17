@@ -1,5 +1,10 @@
-# 💫 About Me:
-I´m a frontend developer and 3D artist.<br>I´m more than 5 years as fulls tack developer
+#Hi, I'm Ivan.
+
+## 💫 About Me:
+- Ssr Front-end developer with 5 years of experience as Full-stack developer. 
+- currently looking for a Front-end position. 
+- Tambien practico y estudio a diario sobre ui/ux.
+- Por cierto, tambien soy artista 3D
 
 
 ## 🌐 Socials:
