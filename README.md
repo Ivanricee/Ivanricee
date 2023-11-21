@@ -1,9 +1,9 @@
 # Hi, I'm Ivan. 🇲🇽
 
 ## 💫 About Me:
- 💼 Ssr FrontEnd developer with 5 years of experience as FullStack developer. </br>
+ 💼 Ssr Front-End developer with more than 9 years of experience. </br>
  👨‍💼️ Currently looking for a position as FrontEnd.  </br>
- 💕 I love creating and experimenting with new tools for UI/UX </br>
+ 💕 I love creating and experimenting with new tools for UI/UX and 3D.</br>
  🤖 I do 3D, you can check my work [here](https://instagram.com/ivanrice_) </br>
  📧 Contact me: [ivanbautistag@gmail.com](mailto:ivanbautistag@gmail.com) </br>
 
